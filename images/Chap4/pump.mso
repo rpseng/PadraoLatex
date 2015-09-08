@@ -1,0 +1,34 @@
+using "streams";
+
+Model pump
+	PARAMETERS
+outer PP as Plugin (Brief = "External Physical Properties", Type="PP");
+outer NComp as Integer;
+	Mw(NComp) as molweight;	
+	
+	VARIABLES
+in	Inlet as stream;
+out	Outlet as streamPH;
+	
+	dP as press_delta (Brief="Pump head");
+	rho as dens_mass;
+	
+	SET
+	Mw=PP.MolecularWeight();
+
+	EQUATIONS
+	"Molar Balance"
+	Inlet.F = Outlet.F;
+	Inlet.z = Outlet.z;
+	
+	"Density"
+	rho * ((1-Outlet.v)/PP.LiquidDensity(Outlet.T,Outlet.P,Outlet.x) + Outlet.v/PP.VapourDensity(Outlet.T,Outlet.P,Outlet.y)) = 1;
+	
+	"Pump head"
+	Outlet.P = Inlet.P + dP;
+	
+	"Enthalpy"
+	Outlet.h = Inlet.h + dP/rho * sum(Mw*Inlet.z);
+end
+
+

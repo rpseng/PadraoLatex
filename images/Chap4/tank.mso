@@ -1,0 +1,94 @@
+#*-------------------------------------------------------------------
+* Model of tanks
+*
+* Author: Paula B. Staudt
+* $Id$
+*--------------------------------------------------------------------*#
+
+using "streams";
+	
+Model tank
+
+	PARAMETERS
+outer PP as Plugin(Brief = "External Physical Properties",Type="PP");
+outer NComp as Integer;
+	Across as area (Brief="Tank cross section area", Default=2);
+	
+	VARIABLES
+in	Inlet as stream;
+out	Outlet as liquid_stream;
+
+in	Q as heat_rate (Brief="Rate of heat supply"); 
+	Level    as length(Brief="Tank level");
+	M(NComp) as mol (Brief="Molar Holdup in the tank");
+	E as energy (Brief="Total Energy Holdup on tank");
+	vL as volume_mol (Brief="Liquid Molar Volume");
+
+	EQUATIONS
+	"Mass balance"
+	diff(M) = Inlet.F*Inlet.z - Outlet.F*Outlet.z;
+	
+	"Energy balance"
+	diff(E) = Inlet.F*Inlet.h - Outlet.F*Outlet.h + Q;
+
+	"Energy Holdup"
+	E = sum(M)*Outlet.h;
+
+	"Mechanical Equilibrium"
+	Inlet.P = Outlet.P;
+	
+	"Liquid Volume"
+	vL = PP.LiquidVolume(Outlet.T, Outlet.P, Outlet.z);
+	
+	"Composition"
+	M = Outlet.z*sum(M);
+	
+	"Level of liquid phase"
+	Level = sum(M)*vL/Across;
+end
+
+Model tank_cylindrical
+	
+	PARAMETERS
+outer PP as Plugin(Brief = "External Physical Properties", Type="PP");
+outer NComp as Integer;
+	radius as length(Brief="Tank radius");
+	L as length(Brief="Tank length");
+	
+	VARIABLES
+in	Inlet as stream;
+out	Outlet as liquid_stream;
+
+in	Q as heat_rate (Brief="Rate of heat supply"); 
+	Level    as length(Brief="Tank level");
+	Across as area (Brief="Tank cross section area", Default=2);
+	M(NComp) as mol (Brief="Molar Holdup in the tank");
+	E as energy (Brief="Total Energy Holdup on tank");
+	vL as volume_mol (Brief="Liquid Molar Volume");
+
+	EQUATIONS
+	"Mass balance"
+	diff(M) = Inlet.F*Inlet.z - Outlet.F*Outlet.z;
+	
+	"Energy balance"
+	diff(E) = Inlet.F*Inlet.h - Outlet.F*Outlet.h + Q;
+
+	"Energy Holdup"
+	E = sum(M)*Outlet.h;
+	
+	"Mechanical Equilibrium"
+	Inlet.P = Outlet.P;
+	
+	"Liquid Volume"
+	vL = PP.LiquidVolume(Outlet.T, Outlet.P, Outlet.z);
+	
+	"Composition"
+	M = Outlet.z*sum(M);
+	
+	"Cylindrical Area"
+	Across = radius^2 * (asin(1) - asin((radius-Level)/radius) ) + 
+				(Level-radius)*sqrt(Level*(2*radius - Level));
+
+	"Level of liquid phase"
+	L*Across = sum(M)*vL;
+end

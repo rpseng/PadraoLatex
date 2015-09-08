@@ -1,0 +1,14 @@
+#TeXlipse project settings
+#Thu Jun 28 16:02:12 BRT 2012
+markTmpDer=true
+builderNum=2
+outputDir=
+makeIndSty=
+bibrefDir=
+outputFormat=pdf
+tempDir=
+mainTexFile=diss.tex
+outputFile=diss.pdf
+langSpell=pt
+markDer=true
+srcDir=

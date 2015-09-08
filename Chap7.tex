@@ -1,0 +1,72 @@
+%
+% 
+%
+\chapter{Conclusões} \label{chap:conclusoes}
+% 
+% Como se sabe, a operação de colunas de destilação vem sendo estudada há muitos anos.
+% Sabe-se também, que este
+% equipamento é um dos mais importantes das indústrias químicas, petroquímicas e de alimentos. Sua
+% importância não se resume só a sua função e operação, mas também devido ao fato de que
+% colunas de destilação são responsáveis por grande parte do gasto de energia em uma
+% indústria. Sendo assim, o desenvolvimento de modelos para estes equipamentos é uma tarefa
+% relevante, tanto para projeto quanto para simulações de operação e otimização das
+% unidades existentes.
+
+Modelos matemáticos de colunas de destilação podem ser classificados de acordo com o seu
+grau de detalhamento: se possuem predição da composição, temperatura e vazões para cada prato,
+os chamados modelos rigorosos, ou se são compostos por uma descrição global da coluna
+utilizando um menor número de variáveis, baseados em algum tipo de interpolação, os modelos
+reduzidos. Neste trabalho, foram apresentadas as diversas formas de
+modelagem de sistemas de separação e concluiu-se que a escolha das considerações
+simplificativas varia com a aplicação do modelo. Em estudos onde são necessárias simulações
+repetitivas, como em otimizações, os modelos reduzidos podem ser os indicados.
+Mas, em estudos de partidas e paradas de colunas de destilação é importante que o
+comportamento dinâmico do sistema seja bem representado levando ao uso de
+modelos rigorosos completos. 
+
+Na linha da modelagem baseada no equilíbrio termodinâmico entre as fases líquida e vapor, foram
+desenvolvidos todos os modelos necessários para a confecção de um modelo genérico de coluna
+de destilação. Os modelos foram implementados no simulador dinâmico de processos EMSO
+utilizando seu ambiente de modelagem e sua linguagem própria. Os modelos gerados neste estudo
+fazem parte da biblioteca EML (EMSO Model Library). Esta biblioteca é distribuída no conceito
+de \emph{software} livre, disponibilizando todos os modelos via internet e sem
+custo.
+
+Um exemplo de uma coluna de destilação reativa serviu como ilustração para a aplicação
+dos modelos desenvolvidos neste trabalho em partidas de unidades de separação.
+Ao contrário da modelagem encontrada na literatura para esse tipo de sistema, a condição de
+equilíbrio termodinâmico entre as fases líquida e vapor foi considerada desde o início da
+simulação sem causar problemas de inicialização e integração, conforme alguns autores relatam.
+A partida de uma
+coluna vazia e fria foi simulada de acordo com três das estratégias convencionais encontradas
+na literatura. Como esperado, a partida realizada com refluxo total para a coluna apresentou um
+tempo de transientes maior que as demais. Além disso, o modelo apresentado se mostrou muito
+indicado para simulações de partida, uma vez que possíveis dificuldades para a determinação de
+seus principais parâmetros não afetam a análise do tempo de operação dinâmica.
+
+Outro exemplo foi utilizado para a validação do modelo desenvolvido. Trata-se de uma coluna
+deisobutanizadora da PETROBRAS composta de 80 pratos que separa isobutano de
+uma mistura de 13 componentes. Algumas pequenas adaptações foram realizadas nos modelos e os resultados obtidos
+foram satisfatórios. Tanto a resposta estacionária quanto o comportamento dinâmico da
+unidade foram comparados. O problema gerou um sistema de mais de 6300 equações. Um período de
+8 dias de operação com várias perturbações na carga e no refluxo da coluna foi simulado em
+cerca de 19 minutos de CPU. Conclui-se com isto que este modelo pode ser aplicado para os
+mais diversos fins, desde simulações de procedimentos de parada e partidas de unidades, até
+estimações, otimizações e treinamento de operação.
+
+Como perspectivas de trabalhos futuros, algumas melhorias podem ser feitas nos modelos apresentados.
+Para tornar o modelo de prato ainda mais genérico, pode ser adicionada uma corrente material extra
+correspondente a uma retirada lateral. Isto permitiria a modelagem de colunas de destilação de petróleo
+sem utilizar separadores de correntes entre os estágios da coluna.
+A modelagem fiel do controle de pressão do topo da torre através do \textit{hot bypass} também é um assunto
+interessante a ser estudado. Provavelmente esta implementação melhoraria a capacidade de predição do modelo
+principalmente nas condições do topo da coluna.
+Além disso, alguns assuntos importantes sobre a modelagem
+de sistemas de separação podem ser estudados.
+Sabe-se que na indústria, grande parte das colunas de destilação operam muito próximo
+do seu limite superior de capacidade. Assim, a previsão do fenômeno de inundação da torre
+e suas conseqüências na eficiência de separação se torna muito interessante.
+Além de colunas de destilação de pratos, as colunas recheadas também são muito utilizadas.
+A adaptação dos modelos apresentados nesta dissertação para a
+representação deste tipo de colunas deverá ser a continuidade deste trabalho.
+

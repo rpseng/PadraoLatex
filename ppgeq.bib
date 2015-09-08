@@ -1,0 +1,3173 @@
+This file was created with JabRef 2.2.
+Encoding: ISO-8859-1
+
+@STRING{AIChE = {AIChE Journal}}
+
+@STRING{ATMS = {ACM Transactions on Mathematics and Software}}
+
+@STRING{AUTO = {Automatica}}
+
+@STRING{CCE = {Computers and Chemical Engineering}}
+
+@STRING{CEJ = {Chemical Engineering Journal}}
+
+@STRING{CEP = {Chemical Engineering and Processing}}
+
+@STRING{CES = {Chemical Engineering Science}}
+
+@STRING{CJ = {Computer}}
+
+@STRING{ESCAPE = {ESCAPE}}
+
+@STRING{FC = {Food Control}}
+
+@STRING{IC = {IEEE Computer}}
+
+@STRING{IEC = {Industrial and Engineering Chemistry Fundamentals}}
+
+@STRING{IECR = {Industrial and Engineering Chemistry Research}}
+
+@STRING{IJC = {International Journal of Control}}
+
+@STRING{INME = {International J. for Numerical Methods in Engng.}}
+
+@STRING{JANM = {J. Appl. Num. Math.}}
+
+@STRING{JCAP = {J. Comp. Appl. Math.}}
+
+@STRING{JMP = {J. Math. Phys.}}
+
+@STRING{LAA = {Linear Algebra and its Applications}}
+
+@STRING{NM = {Numerische Mathematik}}
+
+@STRING{PC = {Parallel Computing}}
+
+@STRING{SIAM = {SIAM Journal of Computing}}
+
+@STRING{SJNA = {SIAM J. Numer. Anal.}}
+
+@STRING{SJSC = {SIAM J. Stat. Comp.}}
+
+@STRING{SJSS = {SIAM J. Sci. Stat. Comp.}}
+
+@STRING{TAC = {IEEE Transactions on Automatic Control}}
+
+@STRING{TC = {IEEE Transactions on Computing}}
+
+@STRING{TCS = {IEEE Transactions on Circuits and System}}
+
+@STRING{TCT = {IEEE Transactions on Circuit Theory}}
+
+@STRING{TICE = {Trans. Inst. Chem. Engrs.}}
+
+@STRING{TICS = {IEEE Transactions on CAD of Integrated Circuit Systems}}
+
+@ARTICLE{Alejski:1996,
+  author = {Krzysztof Alejski and Françoise Duprat},
+  title = {Dynamic Simulation of the Multicomponent Reactive Distillation},
+  journal = {Chemical Engineering Science},
+  year = {1996},
+  volume = {51},
+  pages = {4237--4252},
+  number = {18},
+  abstract = {A dynamic mathematical model of reactive distillation in case of kinetically
+	controlled chemical reaction is formulated using four basic assumptions:
+	negligible vapour holdup compared to the molar liquid holdup, perfect
+	mixing of phases, corrections of equilibrium values by plate efficiency,
+	corrections of conversion for mixing effects by "conversion efficiency".
+	The accuracy of the dynamic simulation results of reactive distillation
+	obtained under different assumptions is verified by comparing with
+	results of actual experiments on a pilot-scale distillation column.
+	Both the unsteady-state period during start-up and the disturbances
+	of continuous operation are considered. Esterification of ethanol
+	with acetic acid with sulphuric acid as homogeneous catalyst is chosen
+	for experiments. Accuracy of simulation is very good in case of model
+	containing hydraulic description of plates with regard to temperatures
+	inside column and in the reboiler. Responses of component concentrations
+	are less accurate, but imposed disturbances were very large. Observed
+	differences result from simplifications of mathematical model, inaccuracy
+	of the kinetic and vapour-liquid equilibrium description for highly
+	nonideal, multicomponent system and from precision of experimental
+	measurements in case of transient state. Differences between experimental
+	and simulation results in case of different models are the most significant
+	for large holdup on plates in comparison with reboiler. As a general
+	rule, in case of reactive distillation simulation for dynamics, description
+	models taking into consideration plate hydraulics should be used.},
+  comment = {Versão impressa.},
+  owner = {Paula},
+  pdf = {reactivedistillation/Alejski:1996.pdf},
+  timestamp = {2006.09.22}
+}
+
+@ARTICLE{Alfradique:2005,
+  author = {Marcelo F. Alfradique and Marcelo Castier},
+  title = {Modeling and simulation of reactive distillation columns using computer
+	algebra},
+  journal = {Computers and Chemical Engineering},
+  year = {2005},
+  volume = {29},
+  pages = {1875--1884},
+  abstract = {This work presents an extension of a computer algebra (CA) program,
+	Thermath, originally developed for the automatic implementation of
+	physical property calculations, to generate computer codes in Fortran
+	for the simulation of steady-state reactive distillation columns.
+	The adopted procedure requires the simultaneous solution, using the
+	Newton-Raphson method, of mass and energy balances, phase equilibrium
+	equations, chemical equilibrium or rates of reaction equations and
+	an additional equation needed to match the number of degrees of freedom.
+	The Thermath program was used to obtain Fortran subroutines that
+	implement these equations and their derivatives with respect to the
+	process variables and the equation of state and/or excess Gibbs free
+	energy model used in the simulation. The results are in excellent
+	agreement with those available in the literature. By using Thermath,
+	it was possible to reduce the time and effort needed to implement
+	the mathematical models of multistage reaction-separation equipment.},
+  comment = {Apenas versão eletrônica.},
+  keywords = {Computer algebra; Reactive distillation; Mathematica; Simulation},
+  owner = {Paula},
+  pdf = {reactivedistillation/Alfradique:2005.pdf},
+  timestamp = {2006.09.22}
+}
+
+@PHDTHESIS{Baur:2000_dissertation,
+  author = {Richard Baur},
+  title = {Modelling Reactive Distillation Dynamics},
+  school = {Clarkson University},
+  year = {2000},
+  comment = {Apenas eletrônica},
+  owner = {Paula},
+  pdf = {reactivedistillation/Baur:2000_dissertation.pdf},
+  timestamp = {2006.09.22}
+}
+
+@ARTICLE{Baur:2000,
+  author = {R. Baur and A.P. Higler and R. Taylor and R. Krishna},
+  title = {Comparison of equilibrium stage and nonequilibrium stage models for
+	reactive distillation},
+  journal = {Chemical Engineering Journal},
+  year = {2000},
+  volume = {76},
+  pages = {33--47},
+  abstract = {For modelling reactive distillation columns, two distinctly different
+	approaches are available in the literature: (1) the equilibrium (EQ)
+	stage model, in which the vapour and liquid phases are assumed to
+	be in thermodynamic equilibrium, and (2) the nonequilibrium (NEQ)
+	stage model in which the finite mass transfer rates across the vapour-liquid
+	interface are accounted for. In this paper, these two approaches
+	are compared using two case studies: (a) synthesis of MTBE and (b)
+	hydration of ethylene oxide to ethylene glycol. It is shown that
+	while the phenomena of multiple steady states is exhibited by both
+	modelling approaches, the "window" in which these multiplicities
+	occur is significantly reduced in the NEQ model. It is also shown
+	that in actual column design, some of the steady states calculated
+	by the EQ model cannot be realised due to e.g. flooding or weeping
+	limitations on distillation trays. Another important conclusion that
+	can be drawn from this work is that the hardware design can have
+	a significant influence on the conversion and selectivity. It is
+	concluded that for design of reactive distillation columns we must
+	adopt the NEQ modelling approach.},
+  comment = {versão eletrônica.},
+  keywords = {Reactive distillation; Equilibrium stage model; Nonequilibrium stage
+	model; Multiple steady states; Maxwell-Stefan equations; Methyl tert-butyl
+	ether synthesis; Ethylene glycol; Tray design},
+  owner = {Paula},
+  pdf = {reactivedistillation/Baur:2000.pdf},
+  timestamp = {2006.09.22}
+}
+
+@ARTICLE{Baur:2004,
+  author = {R. Baur and R. Krishna},
+  title = {Distillation column with reactive pump arounds:an alternative to
+	reactive distillation},
+  journal = {Chemical Engineering and Processing},
+  year = {2004},
+  volume = {43},
+  pages = {435--445},
+  abstract = {The hardware design of reactive distillation (RD) columns pose severe
+	challenges with respect to the choice and design of the hardware;
+	the requirements of reaction (i.e. high liquid or catalyst holdup)
+	is not in consonance with the requirement of separation (high interfacial
+	area). In this paper, we examine an alternative to the RD concept,
+	namely a distillation column networked with a number of side (external)
+	reactors. If each distillation stage is linked to a side reactor,
+	the performance of the RD column is matched exactly. From a practical
+	point of view, it is desirable to reduce the number of side reactors
+	to below, say, six. The precise location of the chosen number of
+	side reactors
+	
+	and the manner in which the liquid draw-offs and reactor effluent
+	re-entry to the distillation column needs to be chosen carefully.
+	We have developed an algorithm to determine an optimum configuration
+	of the side-reactor concept in order to maximise conversion. For
+	the case study of methyl acetate production, we see that it is possible
+	to match the conversion level of an RD column by appropriate choice
+	of the number of side reactors and the pump around ratio. The higher
+	the conversion target the larger the number of side reactors and
+	pump around ratios. For modest conversion levels, say <90%, even
+	a 3-side-reactor configuration will be able to match the performance
+	of the RD column. The study presented here reveals the potential,
+	and limitations, of the side-reactor concept for use as an alternative
+	to RD technology.},
+  keywords = {Reactive distillation; Equilibrium stage model; Methyl acetate; Column
+	hardware; Hydrodynamics; Mass transfer; Flooding; Side-reactors;
+	
+	Pump-arounds},
+  owner = {Paula},
+  pdf = {reactivedistillation/Baur:2004.pdf},
+  timestamp = {2006.09.22}
+}
+
+@ARTICLE{Baur:2001,
+  author = {R. Baur and R. Taylor and R. Krishna},
+  title = {Dynamic behaviour of reactive distillation columns described by a
+	nonequilibrium stage model},
+  journal = {Chemical Engineering Science},
+  year = {2001},
+  volume = {56},
+  pages = {2085--2102},
+  abstract = {In this paper we develop a generic, dynamic, nonequilibrium (NEQ)
+	stage model for reactive distillation (RD) columns. The main features
+	of our model are: (1) use of the Maxwell-Stefan equations for describing
+	mass transfer between fluid phases, (2) solid catalysed reactions
+	are treated using a pseudo-homogeneous liquid phase model with the
+	appropriate pseudo-homogeneous kinetic expressions and (3) a comprehensive
+	set of design correlations, for both trays (sieve, bubble caps) and
+	packings (random dumped, structured), for hold-up and mass transfer
+	have been incorporated into the software package following earlier
+	work (Taylor et al., Comput. Chem. Eng. 18 (1994) 205). We report
+	some interesting dynamic features of RD columns by examining the
+	response of a column for methyl tert-butyl ether (MTBE) synthesis
+	to perturbations in the feed of methanol, iso-butene or n-butene.
+	When operating at a highconversion branch of the bifurcation diagram,
+	small perturbations are shown to lead to a transition to a low-conversion
+	branch. The NEQ model is shown to be more susceptible to feed perturbations
+	than a conventional equilibrium (EQ) model with constant component
+	eficiencies. The di!erences between the dynamic behaviour of trayed
+	and random-packed columns are also emphasised in this work. The dynamic
+	behaviour of the column has been interpreted on the basis of the
+	iso-butene recycle flow in the column. It has been shown that the
+	size, type and duration of a feed perturbation causing a transition
+	from one to another steady state depends on the model description,
+	on the column configuration and on the residence time distribution
+	along the column height. Experimental
+	
+	verification of the developed dynamic model is obtained by comparison
+	with the experimental results of Mohl et al. (Chem. Eng. Sci. 54
+	(1999) 1029) for synthesis of tertiary amyl ether (TAME).},
+  comment = {versão eletrônica.},
+  keywords = {Reactive distillation; Equilibrium stage model; Nonequilibrium stage
+	model; Multiple steady states; Nonlinear dynamics; Maxwell-Stefan
+	
+	equations; Methyl tert-butyl ether synthesis},
+  owner = {Paula},
+  pdf = {reactivedistillation/Baur:2001.pdf},
+  timestamp = {2006.09.22}
+}
+
+@ARTICLE{Baur:2001a,
+  author = {R. Baur and R. Taylor and R. Krishna},
+  title = {Dynamic behaviour of reactive distillation tray columns described
+	with a nonequilibrium cell model},
+  journal = {Chemical Engineering Science},
+  year = {2001},
+  volume = {56},
+  pages = {1721--1729},
+  abstract = {In this paper we develop a generic, dynamic, nonequilibrium (NEQ)
+	cell model for reactive distillation (RD) tray columns. The features
+	of our model are (1) the use of Maxwell-Stefan equations for describing
+	mass transfer between fluid phases, (2) the reaction is assumed to
+	take place in the liquid phase, both within the di!usion layer and
+	in the bulk, (3) the coupling between mass transfer and chemical
+	reactions within the di!usion layer is accounted for, and (4) the
+	use of multiple well-mixed cells in the liquid and vapour flow directions
+	in order to account for staging in either fluid phase. The utility
+	of the developed model is demonstrated by carrying out simulations
+	of a RD column for production of ethylene glycol (EG) by hydration
+	of ethylene oxide. The introduction of staging in the vapour and
+	liquid phases improves the conversion to EG and also reduces the
+	formation of the unwanted di-ethylene glycol. Furthermore, there
+	are marked di!erences between the dynamic column response to feed
+	perturbations between the developed NEQ model and the more commonly
+	used equilibrium (EQ) stage model.},
+  comment = {versão eletrônica.},
+  keywords = {Reactive distillation; Equilibrium stage model; Nonequilibrium stage
+	model; Dynamics; Maxwell-Stefan equations; Ethylene glycol},
+  owner = {Paula},
+  pdf = {reactivedistillation/Baur:2001a.pdf},
+  timestamp = {2006.09.22}
+}
+
+@ARTICLE{Baur:2000a,
+  author = {R. Baur and R. Taylor and R. Krishna},
+  title = {Development of a dynamic nonequilibrium cell model for reactive distillation
+	tray columns},
+  journal = {Chemical Engineering Science},
+  year = {2000},
+  volume = {55},
+  pages = {6139--6154},
+  abstract = {In this paper we develop a nonequilibrium (NEQ) cell model to describe
+	the dynamic operation of reactive distillation (RD) tray columns.
+	The features of our model are: (1) use of the Maxwell-Stefan equations
+	for describing mass transfer between fluid phases, (2) chemical reactions
+	are assumed to take place only in the liquid phase, (3) coupling
+	between mass transfer and chemical reactions within the difusion
+	layer is accounted for, and (4) the use of multiple well-mixed cells
+	in the liquid and vapour flow directions accounts
+	
+	for staging in either fluid phase. When the chemical reactions are
+	suppressed, our model describes the dynamic behaviour of conventional
+	distillation columns. We demonstrate the utility of the dynamic NEQ
+	cell model by means of three case studies: (1) metathesis of 2-propene
+	in an RD column, (2) distillation of methanol-iso-propanol-water,
+	and (3) synthesis of methyl tert-butylether (MTBE) in an RD column.
+	For comparison purposes we have also carried out dynamic simulations
+	using the equilibrium stage (EQ) model. These case studies help us
+	to draw the following conclusions. The introduction of staging in
+	the liquid and vapour phases not only influences the steady-state
+	performance, by increasing reaction conversion and separation capability,
+	but also has a significant influence on column dynamics. With multiple
+	cells per stage the column dynamics becomes much more sensitive to
+	perturbations. Furthermore, we show that even when the NEQ cell model
+	and EQ stage model exhibit almost identical steady-state characteristics,
+	the dynamic responses of an RD column could even be qualitatively
+	diferent. When operating close to the distillation boundary for nonreactive,
+	conventional, distillation, small disturbances in feed compositions
+	can lead to completely di!erent product compositions.},
+  keywords = {Reactive distillation; Equilibrium stage model; Nonequilibrium cell
+	model; Multiple steady states; Dynamics; Maxwell-Stefan equations;
+	
+	Methyl tert-butyl ether synthesis; Metathesis reaction},
+  owner = {Paula},
+  pdf = {reactivedistillation/Baur:2000a.pdf},
+  timestamp = {2006.09.22}
+}
+
+@ARTICLE{Benallou:1986,
+  author = {A. Benallou and D. E. Seborg and D. A. Mellichamp},
+  title = {Dynamic Compartmental Models for Separation Processes},
+  journal = {AIChE Journal},
+  year = {1986},
+  volume = {32},
+  pages = {1067--1078},
+  comment = {artigo apenas utilizado como referência (apud).},
+  owner = {Paula},
+  timestamp = {2006.09.02}
+}
+
+@ARTICLE{Betlem:2000,
+  author = {B. H. L. Betlem},
+  title = {Batch distillation column low-order models for quality program control},
+  journal = {Chemical Engineering Science},
+  year = {2000},
+  volume = {55},
+  pages = {3187--3194},
+  abstract = {For batch distillation, the dynamic composition behaviour can be described
+	by the dominant time constant and the bottom exhaustion. Its magnitude
+	is determined by the change of the composition distribution and is
+	maximal when the inflection point of the molar fraction profile is
+	located in the middle of the column. Then, the tray interactions
+	are minimal. The distribution change during the batch run strongly
+	depends on the applied control strategy. Under constant quality control,
+	the dominant time constant proved to be nearly constant whereas under
+	constant reflux control the dominant time constant can vary by more
+	than a factor of four. To calculate the dominant time constant from
+	static design calculations, two di!erent methods are discussed: the
+	retention time and the "change of inventory" time method. These methods
+	are experimentally verified.},
+  comment = {Apenas versão eletrônica.},
+  keywords = {Batch distillation; Dominant time constant; Distillation control;
+	Distillation modelling},
+  owner = {Paula},
+  pdf = {distillationColumn/Betlem:2000.pdf},
+  timestamp = {2006.08.24}
+}
+
+@ARTICLE{Betlem:1998,
+  author = {B. H. L. Betlem and J. E. Rijnsdorp and R. F. Azink},
+  title = {Influence of tray hydraulics on tray column dynamics},
+  journal = {Chemical Engineering Science},
+  year = {1998},
+  volume = {53},
+  pages = {3991--4003},
+  number = {23},
+  abstract = {To column control, in contrast to column design, tray hold-up and
+	dependencies of tray holdup on the operating conditions play an important
+	role. The essence of this article is the development of an improved
+	model of tray hydraulics over a broad operating range and its experimental
+	validation by means of batch distillation. First, the column dynamics
+	are related to tray column design parameters and operating conditions.
+	The model parameters are fitted by column residence time measurements.
+	Two tray load regimes are distinguished: an aeration regime and an
+	obstruction regime. At low column load a vapour increase will decrease
+	the tray mass since the liquid is driven out by larger aeration.
+	At high load the opposite is the case, since the liquid is driven
+	up by stowage. The resulting dynamic behaviour is studied by linearising
+	the
+	
+	rigorous tray model in an operating point. Especially the influence
+	of the vapour flow on the column dynamics is investigated. For the
+	influence of the tray composition change on the molar mass, a new
+	composition-shift parameter k is defined. The influence appeared
+	to be small.},
+  comment = {versão impressa.},
+  keywords = {Tray hydraulics; distillation dynamics; column dynamics; column design;
+	distillation modelling},
+  owner = {Paula},
+  pdf = {distillationColumn/Betlem:1998.pdf},
+  review = {O artigo apresenta várias equações de hidrodinâmica. É baseado no
+	livro de Lockett.
+	
+	Considera a massa de liquido do downcomer no cálculo da massa total
+	do prato. Apresenta outras equações de hidrodinâmica para deixar
+	a equação da massa de líquido do prato em função de variáveis simples.},
+  timestamp = {2006.08.15}
+}
+
+@ARTICLE{Biardi:1989,
+  author = {G. Biardi and M. G. Grottoli},
+  title = {Development of a new Simulation Model for Real Trays Distillation
+	Column},
+  journal = CCE,
+  year = {1989},
+  volume = {13},
+  pages = {441--449},
+  number = {4/5},
+  comment = {Foi adquirido na CIENTEC. Apenas cópia impressa.},
+  owner = {Paula},
+  review = {Este artigo trata de uma modelagem rigorosa baseada no conceito de
+	prato real. Dois aspectos são analisados: a modelagem físico-química
+	(transferência de massa e energia) e uma definição de eficiência,
+	e a estrutura matemática do modelo para propor um procedimento numérico
+	para a solução do sistema.
+	
+	
+	Um "dilema" apresentado é a complexidade de sistema matemático gerado
+	quando relações de transferência de massa inter e intrafases são
+	adicionadas ao sistema.
+	
+	
+	São listados os motivos pelo qual a modelagem de pratos reais (com
+	difusão e convecção de massa) não são utilizadas normalmente na modelagem:
+	1) o sistema de equações gerado se torna um problema numérico muito
+	pesado e delicado de ser resolvido 2) ainda não há um conhecimento
+	consolidado a cerca de simplificações possíveis nesse tipo de modelagem
+	de acordo com cada caso a ser modelado. 
+	
+	
+	Foram implementados dois modelo rigorosos para simular colunas de
+	destilação multicomponente com pratos reais com diferentes níveis
+	de complexidade de detalhamento. O modelo A apresenta uma forma mais
+	simples (menos rigorosa) com coeficientes de transferência de massa
+	constantes para todos os componentes, um para o lado da fase líquida
+	e outro para o lado da fase vapor. O modelo B usa a equação de difusão
+	multicomponente de Maxwell-Stefan calculando os coeficiente de difusão
+	para ambas as fases através da matriz de coeficientes.
+	
+	Estes dois modelos coincidem quando não há diferença entre os vários
+	coeficientes binários de difusão calculados.
+	
+	
+	Foram utilizados três sistemas para teste e três modelos foram comparados:
+	
+	- Modelo com pratos de equilíbrio ideais
+	
+	- Modelo A
+	
+	- Modelo B
+	
+	
+	Como era de se esperar, o modelo B necessitou de mais tempo computacional.
+	Os modelos A e B apresentaram resultados parecidos, ambos com o número
+	de estágios necessários maior que o indicado pelo modelo convencional.}
+}
+
+@BOOK{Brennan:1989,
+  title = {Numerical Solution of Initial Value Problems in Differential-Algebraic
+	Equations},
+  publisher = {North-Holland},
+  year = {1989},
+  author = {Brennan, K. E. and Campbell, S. L. and Petzold, L. R. },
+  address = {New York}
+}
+
+@MASTERSTHESIS{Brooks:1993,
+  author = {Braden Alan Brooks},
+  title = {Modeling of a Distillation Column using Bond Graphs},
+  school = {The University of Arizona},
+  year = {1993},
+  abstract = {Modeling and simulating distillation columns is not a new enterprise.
+	All of the models described in the literature either contain algebraic
+	loops or simplifying assumptions that render the model ill-equipped
+	for dynamic simulations. The structure and the equations that represent
+	a trayed distillation column are explored using bond graphs. Bond
+	graphs model the power flow in a system, an inherently instructive
+	way to view complex systems. The power of bond graphs is evident
+	by providing a clear, graphical representation of a distillation
+	column that systematically organizes the equations and possible approximations.
+	The model of a distillation column is explored in general and then
+	by using a specific model developed by Steven Gallun. Results of
+	this study reveal several ways of eliminating the algebraic loops
+	and producing a dynamic model. The bond graph model can be expanded
+	by introducing other elements including chemical reactions and thermal
+	interaction with other columns.},
+  comment = {Apenas versão eletrônica.},
+  owner = {Paula},
+  pdf = {distillationColumn/Brooks:1993.pdf},
+  review = {No primeiro capítulo a operação de destilação é explicada. Na página
+	14 é apresentada uma definição interessante de componente chave leve.
+	
+	No capítulo 2, é mostrada a modelagem baseada em equações de coluna
+	de destilação.
+	
+	No capítulo 3 a modelagem via grafos -> ignorei!
+	
+	Na seção 4.1, as primeiras modelagens de colunas são abordadas.
+	
+	Na seção 4.2, apresenta o modelo base para a dissertação de Brooks,
+	o modelo de Gallun
+	
+	No capítulo 5, conclusões sobre modelagem de colunas de destilação.},
+  timestamp = {2006.08.16}
+}
+
+@ARTICLE{Cameron:1986,
+  author = {I. T. Cameron and C. A. Ruiz and R. Gani},
+  title = {A Generalized Model for Distillation Columns - II - Numerical and
+	Computational Aspects},
+  journal = CCE,
+  year = {1986},
+  volume = {10},
+  pages = {199--211},
+  number = {3},
+  comment = {Foi adquirido na CIENTEC. Apenas cópia impressa.},
+  owner = {Paula},
+  review = {Neste artigo, são discutidos os aspectos numéricos envolvidos na solução
+	dos sistemas gerados pela modelagem de colunas de destilação.
+	
+	São investigados aspectos estruturais do sistema como a esparsidade
+	e aspectos de estabilidade como a rigidez.
+	
+	Duas classes de métodos de discretização são analisadas na solução
+	deste sistema: um método BDF (backward-differentiation) e um método
+	baseado em um RK (Runge-Kutta) implícito.
+	
+	
+	As conclusões do artigo apontam para o uso do método DIRK em problemas
+	onde não é necessário alta precisão e o método BDF onde se prefere
+	altas precisões.
+	
+	
+	OBS: Apesar de a modelagem dinâmica gerar um sistema DAE, na época
+	em que o artigo foi publicado não existiam solvers para este tipo
+	de sistema, apenas solvers para sistemas ODE's.
+	
+	Assim, o sistema era dividido em variáveis diferenciais (acúmulos
+	de massa e energia) e variáveis algébricas (procedures).}
+}
+
+@ARTICLE{Carta:1995,
+  author = {R. Carta and G. Tola and A. Servida and M. Morbidelli},
+  title = {Error analysis of collocation models for steady-state multistage
+	separation units},
+  journal = {Computers and Chemical Engineering},
+  year = {1995},
+  volume = {19},
+  pages = {123--127},
+  number = {1},
+  abstract = {The stagewise collocation method is applied to reduce the full-order
+	models using for simulate multistage separation units. In particular
+	we refer to steady-state, high-puity (xd > 0.9999) and simmetric
+	(xb=1-xd) binary distillation columns. The performance of these reduced-order
+	models is represented in a master plot wich provides, rather syntetically,
+	the model error as a function of the reduction order.},
+  comment = {Apenas versão eletrônica.},
+  owner = {Paula},
+  pdf = {distillationColumn/Carta:1995.pdf},
+  review = {Não foi referenciado.},
+  timestamp = {2006.08.24}
+}
+
+@ARTICLE{Castillo:1998,
+  author = {F. J. L. Castillo and G. P. Towler},
+  title = {Influence of multicomponent mass transfer on homogeneous azeotropic
+	distillation},
+  journal = {Chemical Engineering Science},
+  year = {1998},
+  volume = {53},
+  pages = {963--976},
+  number = {5},
+  comment = {Apenas versão eletrônica.},
+  keywords = {Azeotropic distillation; residue curve maps; mass transfer; distillation
+	line maps},
+  owner = {Paula},
+  pdf = {distillationColumn/Castillo:1998.pdf},
+  review = {Artigo interessante caso queira saber mais sobre destilação com formação
+	de azeótropo. Não li o artigo por inteiro.
+	
+	Não foi referenciado.},
+  timestamp = {2006.08.16}
+}
+
+@ARTICLE{Cervantes:1998,
+  author = {A. Cervantes and L. T. Biegler},
+  title = {Large-Scale DAE Optimization Using a Simultaneous NLP Formulation},
+  journal = {AIChE Journal},
+  year = {1998},
+  volume = {44},
+  pages = {1038--1050},
+  number = {5},
+  month = {May},
+  comment = {apenas versão eletrônica.},
+  owner = {Paula},
+  pdf = {optimization/Cervantes:1998.pdf},
+  timestamp = {2007.03.22}
+}
+
+@ARTICLE{Chang:1998,
+  author = {Byoungmu Chang and Seunghoon Lee and Hyeoktae Kwon and Il Moon},
+  title = {Rigorous Industrial Dynamic Simulation of a Crude Distillation Unit
+	Considered Valve Tray Rating Parameters},
+  journal = {Computers and Chemical Engineering},
+  year = {1998},
+  volume = {22},
+  pages = {S863--S866},
+  number = {Suppl.},
+  abstract = {A rigorous dynamic simulation is performed to find optimal operating
+	conditions of a crude distillation unit with 56 trays and 65,000
+	barrel per day capacity. The model includes not only mass and energy
+	balance equations but also nonlinear equations capturing the fluid
+	behavior in the column such as downcomer load, jet flooding, hole
+	velocity limit and downcomer backup. Discrete behavior of pump and
+	heater on/off, valve open/close are also included. Hundreds of thousand
+	differential algebraic equations(DAEs) are set up and solved by gPROMS
+	simultaneously. As a result. the dynamic behavior of the unit during
+	the starting and shutdown procedure is fully understood.},
+  comment = {Versão impressa.},
+  keywords = {Rigorous dynamic simulation, Valve tray rating parameters. Dynamic
+	behavior},
+  owner = {Paula},
+  pdf = {distillationColumn/Chang:1998.pdf},
+  review = {A modelagem básica não apresenta novidades...o que difere dos outros
+	artigos é a modelagem baseada nas válvulas dos pratos. Nos balanços
+	é considerado o arraste de líquido.
+	
+	Apenas estão presentes as considerações e parâmetros das válvulas
+	a serem considerados. Não é apresetando o equacionamento.},
+  timestamp = {2006.08.16}
+}
+
+@ARTICLE{Cho:1984,
+  author = {Y. S. Cho and B. Joseph},
+  title = {Reduced order Models for separation Columns - III - Aplication to
+	columns with multiple feeds and sidestreams},
+  journal = {Computers and Chemical Engineering},
+  year = {1984},
+  volume = {8},
+  pages = {81--90},
+  number = {2},
+  abstract = {Reduced order dynamic models for distillation columns are developed
+	using the polynomial approximation method (orthogonal collocation).
+	The discontinuities in column profiles introduced by feeds and sidedraws
+	are partially removed through suitable redefinition of variables,
+	thus enabling the column profiles to be fitted with a single polynomial
+	across the entire column. The strengths and weakness for these reduced
+	order models are explored by application studies in multicomponent
+	distillation. These included a nonideal system of four components.
+	The accuracy and efficiency of the reduced models are also compared
+	with simulation results obtained using a dynamic modela developed
+	at Monsanto Company.},
+  comment = {Apenas verão impressa. Retirado da CIENTEC.},
+  owner = {Paula},
+  timestamp = {2006.09.04}
+}
+
+@ARTICLE{Dave:2003,
+  author = {Dhaval J. Dave and Murtuza Z. Dabhiya and S.V.K. Satyadev and Saibal
+	Ganguly and Deoki N. Saraf},
+  title = {Online tuning of a steady state crude distillation unit model for
+	real time applications},
+  journal = {Journal of Process Control},
+  year = {2003},
+  volume = {13},
+  pages = {267--282},
+  abstract = {The steady state simulators, used for on-line performance prediction
+	and for on-line optimization in crude distillation units are often
+	sensitive to small variations in the feed composition, which is specified
+	in terms of a True Boiling Point (TBP) vs volume percent distilled
+	curve. The exact feed TBP is often not available during the plant
+	operation. Also stratification of raw crude oil into layers in the
+	large tank farm sections cause severe operating problems in terms
+	of the stability of the column. If feed TBP can be predicted online,
+	necessary feedforward action can considerably reduce the operating
+	problems. A model has been developed for backcalculation of feed
+	TBP using measured plant parameters. A heat balance is performed
+	around an envelope encompassing the rectifying section of the fractionator
+	and is followed by the calculation of Equilibrium Flash Vaporization
+	(EFV) temperatures at six different locations of the column which
+	are correlated with corresponding feed TBP temperatures. The second
+	part of model tuning consists of calculating model parameters in
+	the form of point efficiencies so as to minimize the discrepancy
+	between the simulator predicted and measured column parameters which
+	arises out of modelling approximations such as assumption of phase
+	equilibria at each stage and use of imperfect thermodynamics correlations.
+	The simulator results, after tuning, were found to match the plant
+	measurements within two percent in all the cases investigated. The
+	simulator output was used to predict various product properties using
+	a Property Prediction package and these were also found to match
+	well with those of laboratory measurements.Both the backcalculation
+	of feed TBP and the efficiency tuning need to be implemented on-line
+	for inferential control and supervisory optimization.},
+  comment = {Apenas versão eletrônica.},
+  keywords = {Online tuning; Crude distillation; Crude TBP backcalculation; Distillation
+	model tuning},
+  owner = {Paula},
+  pdf = {distillationColumn/Dave:2003.pdf},
+  review = {Não foi referenciado.},
+  timestamp = {2006.08.24}
+}
+
+@ARTICLE{Diwekar:1987,
+  author = {U. M. Diwekar and R. K. Malik and K. P. Madhavan},
+  title = {Optimal reflux rate policy determination for multicomponent batch
+	distillation columns},
+  journal = {Computers and Chemical Engineering},
+  year = {1987},
+  volume = {11},
+  pages = {629--637},
+  number = {6},
+  abstract = {This paper describes a procedure to obtain optimal reflux or optimal
+	distillate rate policy for multicomponent batch distillation columns
+	using the Pontryagin's continuous maximum principle. For application
+	to multicomponent systems, a reduced order model is used using short-cut
+	procedure develop specially for analysis and design of batch columns.},
+  comment = {Apenas versão impressa. Retirado da CIENTEC.},
+  owner = {Paula},
+  timestamp = {2006.09.04}
+}
+
+@MASTERSTHESIS{Domingues:2005,
+  author = {Tito Livio Domingues},
+  title = {Avaliação da eficiência de pratos valvulados com downcomer e pratos
+	dualflow em colunas de destilação industriais},
+  school = {Universidade Federal do Rio Grande do Sul, Escola de Engenharia,
+	Departamento de Engenharia Química},
+  year = {2005},
+  owner = {Paula},
+  timestamp = {2007.08.15}
+}
+
+@BOOK{Eckel:2000,
+  title = {Thinking in C++},
+  publisher = {Prentice Hall},
+  year = {2000},
+  author = {Bruce Eckel},
+  volume = {1},
+  edition = {2nd},
+  month = {April},
+  comment = {Versão impressa.},
+  owner = {Paula},
+  timestamp = {2006.10.11}
+}
+
+@ARTICLE{Eckert:1995,
+  author = {E. Eckert and M. Kubicek},
+  title = {Dynamic Simulations of a Distillation with multiple liquid phases},
+  journal = {Computers and Chemical Engineering},
+  year = {1995},
+  volume = {19},
+  pages = {S393 --S398},
+  number = {Suppl.},
+  abstract = {A rigorous mathematical model of dynamical behaviour of a distillation
+	column with a possible occurrence of several (e.g. three ) liquid
+	phases on individual trays is described. The generalized model is
+	based on the concept of the equilibrium tray. By solving the algebraic
+	part of DAE system, the phase situation is tested and the system
+	is changing adaptively in the course of the integration. Examples
+	of a distillation of mixtures with possible existence of two and
+	three liquid phases are presented.},
+  comment = {Apenas versão eletrônica.},
+  keywords = {Distillation; equilibrium stage column; dynamic model; multiple liquid-vapour
+	equilibrium; phase splitting},
+  owner = {Paula},
+  pdf = {distillationColumn/Eckert:1995.pdf},
+  review = {Apresenta um equacionamento que permite a predição de mais de uma
+	fase líquida em equilíbrio.
+	
+	Artigo muito bom!!!},
+  timestamp = {2006.08.16}
+}
+
+@ARTICLE{Eckert:2001,
+  author = {Egon Eckert and Tomás Vanek},
+  title = {Some aspects of rate-based modelling and simulation of three-phase
+	distillation columns},
+  journal = {Computers and Chemical Engineering},
+  year = {2001},
+  volume = {25},
+  pages = {603--612},
+  abstract = {The application of the bate-based approach to the dynamic and stationary
+	modelling of three-phase distillation columns is presented. The main
+	problem can be seen in finding adequate models for the mass and heat
+	transfer over phase interfaces to be utilised in the Maxwell-Stefan
+	equations. While for the vapour-(continuous) liquid interface, there
+	are a number of methods and data available, the interface between
+	continuous and dispersed liquid phases has not been studied for the
+	case of distillation processes. A reasonable alternative approach
+	to modelling of a three-phase distillation column can be found where
+	the
+	
+	liquid-liquid interface is treated as equilibrium. The adequacy of
+	this modification is supported by phenomena observed on distillation
+	trays, e.g. strong agitation of liquid phases. The resulting combined
+	non-equilibrium and equilibrium model is compared to the classical
+	equilibrium model and also to experimental data for ethanol-water-cyclohexane
+	separation in a number of examples.},
+  comment = {Apenas versão eletrônica.},
+  keywords = {Rate-based approach; Three-phase distillation; Non-equilibrium tray
+	model; Simulation},
+  owner = {Paula},
+  pdf = {distillationColumn/Eckert:2001.pdf},
+  review = {Rate-based = non equilibrium
+	
+	O foco do artigo é a separação com três fases de equilíbrio (V-L1-L2).
+	
+	A modelagem (balanços...) é apresentada por partes, dividida conforme
+	as fases consideradas: fase vapor, fase líquida (contínua e dispersa)
+	, interface líquido-vapor.
+	
+	Ler mais atentamente a parte de exemplos e conclusões.
+	
+	Excelente artigo!},
+  timestamp = {2006.08.16}
+}
+
+@ARTICLE{Eiden:1997,
+  author = {Ulrich Eiden and Stephan Scholl},
+  title = {Use of Simulation in Rating and Design of Distillation Units},
+  journal = {Computers and Chemical Engineering},
+  year = {1997},
+  volume = {21},
+  pages = {S199--S204},
+  number = {Suppl.},
+  abstract = {The appropriate level of modelling detail in steady state flowsheet
+	simulations is an important question for the calculation of thermal
+	separation operations such as absorption, distillation, and liquid/liquid
+	extraction. The generation of consistent mass and energy balances
+	may often be performed employing standard implementations for the
+	various unit operations. Surprisingly, operability and sensitivity
+	aspects of the process may be estimated with the help of black box
+	mass balance cosiderations. As soon as flowsheet simulation is to
+	serve as a basis for the rating of existing or the design of new
+	distillation units, the level of modelling detail has to be increased
+	significantly and a Complex Topology Simulation (CTS) is required.
+	Thus, the level of the modelling detail depends strongly on the current
+	project state as well as the information desired. These aspects will
+	be discussed through four examples of practical relevance concerning
+	distillation feed sections and liquid distributors, reboiler section,
+	condensation stage and operability aspects.},
+  comment = {Apenas versão eletrônica.},
+  owner = {Paula},
+  pdf = {distillationColumn/Eiden:1997.pdf},
+  review = {Não foi referenciado.},
+  timestamp = {2006.08.24}
+}
+
+@ARTICLE{Elgue:2004,
+  author = {S. Elgue and L. Prat and M. Cabassud and J.M. Le Lann and J. Cézerac},
+  title = {Dynamic models for start-up operations of batch distillation columns
+	with experimental validation},
+  journal = CCE,
+  year = {2004},
+  volume = {28},
+  pages = {2735--2747},
+  abstract = {The simulation of batch distillation columns during startup operations
+	is a very challenging modelling problem because of the complex dynamic
+	behaviour. Only few rigorous models for distillation columns startup
+	are available in literature and generally required a lot of parameters
+	related to tray or pack geometry. On an industrial viewpoint, such
+	a complexity penalizes the achievement of a fast and reliable estimate
+	of start-up periods. In this paper, two "simple" mathematical models
+	are proposed for the simulation of the dynamic behaviour during startup
+	operations from an empty cold state. These mathematical models are
+	based on a rigorous tray by tray description of the column described
+	by conservation laws, liqui/vapour equilibrium relationships and
+	equations representative of hydrodynamics. The models calibration
+	and validation are studied through experiments carried out on a batch
+	distillation pilot plant, with perforated trays, supplied by a water
+	methanol mixture. The proposed models are shown by comparison between
+	simulation and experimental studies to provide accurate and reliable
+	representations of the dynamic behaviour of batch distillation column
+	startups, in spite of the few parameters entailed.},
+  comment = {Versão Impressa.},
+  keywords = {Dynamic simulation, Batch distillation column, Startup operation,
+	Experimental validation},
+  owner = {Paula},
+  pdf = {distillationColumn/Elgue:2004.pdf},
+  review = {O objetivo deste artigo é estudar, simular e validar o comportamento
+	dinâmico de uma coluna de destilação em batelada, durante a sua partida,
+	utilizando dois modelos diferentes.
+	
+	
+	É citado o procedimento necessário para rodar uma partida: a detecção
+	de eventos. (Problema que não tenho no EMSO)
+	
+	
+	A modelagem hidráulica não é capaz de prever gotejamento, arraste
+	e inundação.
+	
+	Fornece uma forma interessante de representar a eficiência de MURPHREE.
+	Como se a corrente de vapor fosse dividida em duas. e*V é a corrente
+	que entra no cálculo de equilíbrio e (1-e)*V é a corrente que by-passa
+	o prato indo direto para o prato acima. A eficiência de Murphree
+	representa essa fração "e".
+	
+	
+	Explica com detalhes a procedimento de partida de uma coluna batelada.
+	
+	Com um modelo simplificado é gerado um parâmetro chamado de razão
+	de enchimento do prato que representa o valor de holdup de líquido
+	em que o prato já está cheio o suficiente para começar a gerar vapor
+	para entrar no prato de cima. Antes deste parâmetro atingir o valor
+	especificado, todo o vapor que chega ao prato condensa imediatamente
+	contribuindo para o acúmulo de líquido.
+	
+	No modelo realístico, o vapor que sobre para os pratos condensa na
+	parede de prato e cai para o prato abaixo até que o prato encha e
+	a parede do prato esquente. Depois disso o vapor sobe mais um prato
+	e assim por diante até que todos os pratos encham. O modelo realístico
+	necessita de dados sobre o prato para calcular o seu aquecimento.
+	
+	
+	Estes modelos foram validados com dados experimentais retirados de
+	uma coluna batelada piloto.
+	
+	
+	Como conclusão: o modelo simplificado apresenta bons resultados e
+	necessita de menos dados do equipamento. Já o modelo realístico apresenta
+	resultados mais precisos porém requer mais detalhamento do equipamento
+	e é mais demorado.}
+}
+
+@PHDTHESIS{Feehery:1998,
+  author = {William Fracis Feehery},
+  title = {Dynamic Optimization with Path Constraints},
+  school = {Massachusetts Institute of Technology},
+  year = {1998},
+  month = {June},
+  comment = {Apenas versão eletrônica.},
+  owner = {Paula},
+  pdf = {optimization/Feehery:1998.pdf},
+  review = {No capítulo 8 é apresentada a modelagem de coluna de destilação.},
+  timestamp = {2007.03.20}
+}
+
+@ARTICLE{Fletcher:2000,
+  author = {R. Fletcher and W. Morton},
+  title = {Initialising Distillation Column Models},
+  journal = CCE,
+  year = {2000},
+  volume = {23},
+  pages = {1811--1824},
+  abstract = {Difficulties associated with the optimisation of distillation column
+	models by non-linear programming are considered. The paper presents
+	a systematic procedure to enable these difficulties to be overcome
+	and proposes a particular formulation of the distillation column
+	model. A certain limiting case of the column model is examined, that
+	of infinite reflux or zero feed. This limiting case considerably
+	simplifies the model and provides a system of non-linear equations
+	that is readily solved. The solution of this problem gives useful
+	information about the purity that can be achieved in the general
+	case and the number of plates needed
+	
+	to attain a given level of purity. The limiting problem provides starting
+	values for the solution of the general column and suggests a homotopy
+	that can be followed if difficulties arise in obtaining convergence.
+	To obtain a stable form of the limiting case requires the general
+	column model to be formulated in a certain way, which to our knowledge
+	has not previously been considered. The ideas have been successfully
+	tested on various multi-column flowsheets involving distillation
+	columns with heat integration.},
+  comment = {Versão impressa.},
+  keywords = {Distillation column, Mathematical model, Zero-feed column; Non-linear
+	programming, AMPL},
+  owner = {Paula},
+  pdf = {distillationColumn/Fletcher:2000.pdf},
+  review = {O artigo apresenta uma nova modelagem para facilitar a inicialização
+	do sistema a fim de utilizar rotinas de otimização. Ele propõe a
+	análise de dois casos limites (refluxo infinito e alimentação zero)
+	para a geração de valores iniciais para as variáveis para solução
+	de otimização via NLP. Ele diz também que o resultado da análise
+	destes estados oferece estimativas da pureza que pode ser alcançada
+	pela separação ou o número de estágios necessários para alcançar
+	uma dada pureza desejada.
+	
+	Com a diferente formulação proposta, o sistema de equações se torna
+	mais simples (um sistema de equações não linear) e de fácil resolução.
+	
+	
+	É utilizada a linguagem de modelagem AMPL.
+	
+	
+	É considerado apenas a solução em EE. A dinâmica não é levada em conta!
+	O modelo utiliza apenas equações algébricas.}
+}
+
+@BOOK{Forbes:1948,
+  title = {A Short History of the Art of Distillation},
+  publisher = {Leiden, Netherlands},
+  year = {1948},
+  editor = {E. J. Brill},
+  author = {R. J. Forbes},
+  comment = {como referência apud},
+  owner = {Paula},
+  review = {como referência apud.},
+  timestamp = {2006.09.21}
+}
+
+@ARTICLE{Gani:1989,
+  author = {R. Gani and I. T. Cameron},
+  title = {Extension of Dynamic Models of Distillation Columns to Steady-State
+	Simulation},
+  journal = CCE,
+  year = {1989},
+  volume = {13},
+  pages = {271--280},
+  number = {3},
+  abstract = {The steady state simulation problem has been successfully coupled
+	to an existing dynamic model for distillation columns. The coupling
+	fo the dynamic and the steady state problems has been made by modifying
+	the numerical procedure for solving ordinary-differential equations
+	to solving as well, a set of purely algebraic equations. This has
+	allowed the development of a versatile simulation model capable o
+	solving dynamic and some steady state simulation problems. The solution
+	strategy is presented along with numerical results illustrating the
+	special features of the proposed simulation model.},
+  comment = {Foi adquirido na CIENTEC. Apenas cópia impressa.},
+  owner = {Paula},
+  review = {Primeiramente, os autores falam que é mais difícil de conseguir a
+	convergência de um modelo estacionário (sistema algébrico) que dinâmico
+	(DAE), porém, o problema estacionário necessita um tempo computacional
+	menor. A proposta é acoplar características dos dois modelos para
+	tornar a solução de problemas estacionários mais robusta.
+	
+	O modelo é baseado no artigo I do Gani.
+	
+	
+	Embora o artigo proponha a simulação de estado estacionário a partir
+	de um modelo dinâmico, ele defende que resultados melhores podem
+	ser obtidos com modelos propriamente estacionários. A justificativa
+	do método proposto é de que muitas vezes os problemas estacionários
+	oferecem muita dificuldade na sua inicialização. Nestes casos, um
+	acoplamento com modelo dinâmico resolveria o problema.
+	
+	
+	A troca entre o modo estacionário e o modo dinâmico depende do cálculo
+	dos resíduos das equações. Se com os chutes iniciais o problema algébrico
+	não consegue ser resolvido, o problema passa para o modo dinâmico
+	para um rápida integração para que os estados sejam estimados com
+	os chutes iniciais correspondendo às condições iniciais. Assim que
+	o RES < tol, ou tenha passado um dado tempo de integração, ou ainda
+	o passo da integração já esteja grande o suficiente, o problema volta
+	para o modo estacionário.
+	
+	
+	Os resultados da aplicação do método proposto foram apresentados com
+	a utilização de 4 problemas teste.}
+}
+
+@ARTICLE{Gani:1986,
+  author = {R. Gani and C. A. Ruiz and I. T. Cameron},
+  title = {A Generalized Model for Distillation Columns - I - Model Description
+	and Applications},
+  journal = CCE,
+  year = {1986},
+  volume = {10},
+  pages = {181--198},
+  number = {3},
+  abstract = {A generalized model for the dynamic simulation of distillation columns
+	is presented. The model allows the solution of a wide variety fo
+	problems, from open and closed-loop responses of single (and multiple)
+	columns to operability studies (of feed changeover and startup operations)
+	and column instability studies (effect of plate hydraulics during
+	transient operations). Results are given for single columns (including
+	industrial) as well as multiple columns for a different types of
+	operations. The problems include thermodynamically close to ideal
+	systems to highly ninideal systems. Efficient and robust numerical
+	integrators are used to obtain reliable solutions even for difficult
+	discontinuous operations.},
+  comment = {Foi adquirido na CIENTEC. Apenas cópia impressa.},
+  owner = {Paula},
+  review = {Inicialmente, os autores enfatizam a necessidade da elaboração de
+	um modelo genérico, para vários tipos de estudos e vários tipos de
+	configurações de colunas de destilação mas que ao mesmo tempo seja
+	numericamente robusto, eficiente e realístico.
+	
+	O modelo utiliza o paradigma orientado a equações para resolver os
+	sistema de equações diferenciais (ODEs) e o paradigma sequencial
+	modular para resolver cada subgrupo de equações algébricas.
+	
+	Então, o sistema final que é composto por um sistema de ODEs, balanços
+	de massa e energia, e um sistema de equações algébricas, que correspondem
+	aos cálculos termodinâmicos, hidráulica dos pratos, controladores
+	e outros. As equações algébricas, divididas em subconjuntos, são
+	resolvidas para a determinação do lado direito das equações diferenciais
+	necessário pelo integrador. Com a estimativa do lado direito, as
+	variáveis diferenciais são estimadas seus valores retornam para as
+	algébricas e assim segue o procedimento até o tempo final requerido.
+	
+	
+	O artigo é dividido em duas partes: a primeira descreve e modelagem
+	e a segunda a resolução do sistema gerado. Alguns exemplos são apresentados
+	para a validação do sistema proposto.}
+}
+
+@ARTICLE{Gao:2003,
+  author = {Wuzi Gao and Robert L. Robinson Jr. and Khaled A.M. Gasem},
+  title = {Alternate equation of state combining rules and interaction parameter
+	generalizations for asymetric mixtures},
+  journal = {Fluid Phase Equilibria},
+  year = {2003},
+  volume = {213},
+  pages = {19--37},
+  owner = {Paula},
+  timestamp = {2007.10.23}
+}
+
+@ARTICLE{Gross:1998,
+  author = {E Gross and E. Baumann and A. Geser and D.W.T. Rippin and L. Lang},
+  title = {Modelling, simulation and controllability analysis of an industrial
+	heat-integrated distillation process},
+  journal = {Computers and Chemical Engineering},
+  year = {1998},
+  volume = {22},
+  pages = {223--237},
+  number = {1-2},
+  abstract = {A controllability analysis of an industrial heat-integrated distillation
+	process is described. The rigorous process model includes the important
+	interactions of the liquid inventories between each other and with
+	the heat transfer rate. Three different control schemes are investigated
+	using steady-state and dynamic controllability measures. These schemes
+	are compared with an unconventional control structure. The application
+	of controllability analyses to real world examples is discussed.},
+  comment = {Apenas versão eletrônica.},
+  owner = {Paula},
+  pdf = {distillationColumn/Gross:1998.pdf},
+  review = {LER O ARTIGO MAIS A FUNDO PARA SABER DE INTEGRAÇÃO DE COLUNAS DE DESTILAÇÃO.
+	Não foi referenciado.},
+  timestamp = {2006.08.16}
+}
+
+@ARTICLE{Grossmann:2005,
+  author = {Ignacio E. Grossmann and Pio A. Aguirre and Mariana Barttfeld},
+  title = {Optimal synthesis of complex distillation columns using rigorous
+	models},
+  journal = {Computers and Chemical Engineering},
+  year = {2005},
+  volume = {29},
+  pages = {1203--1215},
+  abstract = {The synthesis of complex distillation columns has remained a major
+	challenge since the pioneering work by [Sargent, R.W.H., & Gaminibandara,
+	K. (1976). Optimal design of plate distillation columns. In L.C.W.
+	Dixon (Ed.), Optimization in action. New York: Academic Press]. In
+	this paper, we first provide a review of recent work for the optimal
+	design of distillation of individual columns using tray-by-tray models.
+	We examine the impact of different representations and models, NLP,
+	mixed-integer nonlinear programming (MINLP) and generalized disjunctive
+	programming (GDP), as well as the importance of appropriate initialization
+	schemes. We next provide a review of the synthesis of complex column
+	configurations for zeotropic mixtures and discuss different superstructure
+	representations as well as decomposition schemes for tackling these
+	problems. Finally, we briefly discuss extensions for handling azeotropic
+	mixtures. Numerical examples are presented to demonstrate that effective
+	computational strategies are emerging that are based on disjunctive
+	programming models that are coupled with thermodynamic initialization
+	models and integrated through hierarchical decomposition techniques.},
+  comment = {Apenas versão eletrônica.},
+  keywords = {Disjunctive programming; Complex distillation columns; Initialization},
+  owner = {Paula},
+  pdf = {optimization/Grossmann:2005.pdf},
+  review = {Síntese por otimização. Artigo não lido.Não foi referenciado.},
+  timestamp = {2006.08.16}
+}
+
+@ARTICLE{Gumus:1997,
+  author = {Zeynep H. Gumus and Amy R. Ciric},
+  title = {Reactive Distillation Column Design with Vapor/Liquid/Liquid Equilibria},
+  journal = {Computers and Chemical Engineering},
+  year = {1997},
+  volume = {21},
+  pages = {S983--S988},
+  number = {Suppl.},
+  abstract = {This paper explores the design of reactive distillation columns with
+	vapor/liquid/liquid equilibria. The number of phases and the phase
+	equilibria on each tray are determined by minimizing the Gibbs free
+	energy, allowing for a variable number of phases on each tray. The
+	minimization problems are embedded within a larger problem that minimizes
+	the annualized cost of the column, creating a bilevel optimization
+	problem. A novel sequential approximation approach that can identify
+	global solutions of the inner optimization problems is also introduced.
+	The sequential approximation approach is employed to design reactive
+	distillation and reactive flash processes.},
+  comment = {APenas versão eletrônica.},
+  owner = {Paula},
+  pdf = {reactivedistillation/Gumus:1997.pdf},
+  timestamp = {2006.09.22}
+}
+
+@ARTICLE{Higler:1999,
+  author = {A.P. Higler and R. Taylor and R. Krishna},
+  title = {The influence of mass transfer and mixing on the performance of a
+	tray column for reactive distillation},
+  journal = {Chemical Engineering Science},
+  year = {1999},
+  volume = {54},
+  pages = {2873--2881},
+  comment = {versão eletrônica.},
+  keywords = {Reactive distillation; Ethylene glycol; Maxwell-Stefan equations;
+	Energy balance; Multiple steady states; Tray design},
+  owner = {Paula},
+  pdf = {reactivedistillation/Higler:1999.pdf},
+  timestamp = {2006.09.22}
+}
+
+@PHDTHESIS{Higler:1999_dissertation,
+  author = {Arnoud Peter Higler},
+  title = {A Nonequilibrium Model for Reactive Distillation},
+  school = {Clarkson University},
+  year = {1999},
+  month = {September},
+  comment = {Apenas eletrônica.},
+  owner = {Paula},
+  pdf = {reactivedistillation/Higler:1999_dissertation.pdf},
+  timestamp = {2006.09.22}
+}
+
+@ARTICLE{Hongyan:2002,
+  author = {Zhang Hongyan and Wang Shuying and Zhou Rongqi and Duan Zhanting},
+  title = {Mixing pool model for prediction of distillation tray efficiency
+	with liquid entrainment},
+  journal = {Chemical Engineering Journal},
+  year = {2002},
+  volume = {88},
+  pages = {21--26},
+  abstract = {In order to make clear the effect of liquid entrainment on the distillation
+	tray efficiency, a new type of mixing pool model is developed in
+	this paper to calculate the apparent distillation tray efficiencies
+	when the liquid entrainment happens for the counter current tray
+	with vapour unmixing between trays and liquid partially mixing on
+	trays. The analytical solutions are obtained and compared with the
+	calculated results
+	
+	of Bennett's experimental correlations. The mean relative error between
+	them is 5.6% for the range of 0 <= Pe <= 1000, 0.5 <= lambda <= 3.0
+	and 0.4 <= E <= 1.0. The result shows that the model presented in
+	this paper is reliable.},
+  comment = {Apenas versão eletrônica.},
+  keywords = {Distillation; Tray; Mixing pool model; Liquid entrainment; Apparent
+	tray efficiency; Analytical solution},
+  owner = {Paula},
+  pdf = {distillationColumn/Hongyan:2002.pdf},
+  review = {Artigo que trás uma formulação detalhada a cerca dos gradientes de
+	mistura no prato, do arraste e outras variáveis que podem influenciar
+	o cálculo da eficiência.},
+  timestamp = {2006.08.16}
+}
+
+@TECHREPORT{Solomon:2007,
+  author = {{HSB Solomon Associates LLC}},
+  title = {2006 Worldwide Refining APC/Automation Performance Analysis - Part
+	II: Special Topics},
+  institution = {HSB Solomon Associates LLC},
+  year = {2007},
+  owner = {Paula},
+  timestamp = {2007.10.23}
+}
+
+@ARTICLE{Humphrey:1992,
+  author = {J. L. Humphrey and A. F. Siebert},
+  title = {Separation technologies: An opportunity for energy savings},
+  journal = {Chem. Eng. Progr.},
+  year = {1992},
+  volume = {88},
+  pages = {32--41},
+  number = {3},
+  comment = {Artigo citado como apud!},
+  owner = {Paula},
+  timestamp = {2006.08.29}
+}
+
+@ARTICLE{Huss:1996,
+  author = {Robert S. Huss and Arthur W. Westerberg},
+  title = {Collocation Methods for Distillation Design. 1. Model Description
+	and Testing},
+  journal = {Ind. Eng. Chem. Res.},
+  year = {1996},
+  volume = {35},
+  pages = {1603--1610},
+  abstract = {Fast and accurate distillation design requires a model that significantly
+	reduces the problem size while accurately approximating a full-order
+	distillation column model. This collocation model builds on the concepts
+	of past collocation models for design of complex real-world separation
+	systems. Two variable transformations make this method unique. Polynomials
+	cannot accurately fit trajectories which flatten out. In columns,
+	flat sections occur in the middle of large column sections or where
+	concentrations go to 0 or 1. With an exponential transformation of
+	the tray number which maps zero to an infinite number of trays onto
+	the range 0-1, four
+	
+	collocation trays can accurately simulate a large column section.
+	With a hyperbolic tangent transformation of the mole fractions, the
+	model can simulate columns which reach high purities. Furthermore,
+	this model uses multiple collocation elements for a column section,
+	which is more accurate than a single high-order collocation section.},
+  comment = {Apenas versão eletrônica.},
+  owner = {Paula},
+  pdf = {distillationColumn/Huss:1996.pdf},
+  timestamp = {2006.08.28}
+}
+
+@ARTICLE{Jobson:1997,
+  author = {Megan Jobson},
+  title = {Short-cut Evaluation of Distillation Sequences},
+  journal = {Computers chem. Engng,},
+  year = {1997},
+  volume = {21},
+  pages = {S553--S557},
+  number = {Suppl.},
+  abstract = {For screening sequences of distillation columns, heuristic rules may
+	be used, but the many contradictions and limitations of heuristics
+	are well known. Vapour load is often used as a cost indicator for
+	separation sequences. However, capital costs, which vapour load does
+	not incorporate, also make a significant and variable contribution
+	to the total annual costs of distillation processes. 
+	
+	A "boiling capacity variable" has been developed, which is calculated
+	from the number of stages and internal flow rates in a column. It
+	measures the total internal vaporization rate in a process. That
+	is, for a distillation column, the overall boiling capacity is the
+	sum over all stages (including the reboiler and the condenser) of
+	the molar vapour flow rate. The short-cut methods of Fenske, Underwood,
+	Gilliland and others exist for calculating the reflux ratio and number
+	of stages of distillation columns. The overall capacity variable
+	can therefore be calculated using these short-cut methods.
+	
+	The optimal separation sequence for an ideal five-component mixture
+	is investigated in this work. Distillation sequences are evaluated
+	using both rigorous simulation with detailed cost analysis and the
+	capacity variable and short-cut methods. The short-cut results are
+	found to agree with the rigorous results, but have the benefits of
+	requiring fewer detailed assumptions and being less computationally
+	demanding.},
+  comment = {Apenas versão eletrônica.},
+  owner = {Paula},
+  pdf = {distillationColumn/Jobson:1997.pdf},
+  review = {ler mais profundamente.Não foi referenciado.},
+  timestamp = {2006.08.23}
+}
+
+@ARTICLE{Kaeser:2006,
+  author = {M. Kaeser and C.L. Pritchard},
+  title = {The impact of heat transfer on Murphree tray efficiency},
+  journal = {Energy},
+  year = {2006},
+  volume = {Article in Press},
+  pages = {--},
+  abstract = {This work features the experimental determination of heat transfer
+	coefficients and Murphree tray efficiencies on a diabatic (heat-transferring)
+	distillation tray. The present investigation, focussing on the impact
+	of heat transfer on sieve tray performance, is part of a long-term
+	project on heat integrated distillation columns (HIDiC). Heat transfer
+	coefficients and tray efficiencies have been determined experimentally
+	for the methanol/water system in a 150mm diameter distillation column.
+	The heat-transferring tray was operated in both heating and cooling
+	modes, with heat fluxes up to 50 and 100kW/m2, respectively. The
+	experimental data from these diabatic experiments were compared with
+	data obtained from the same column in adiabatic mode and were correlated
+	with the vapour velocity and the heat flux to/from the tray.},
+  comment = {Article in Press. Apenas versão eletrônica.},
+  keywords = {HIDiC; Murphree tray efficiency; Sieve trays},
+  owner = {Paula},
+  pdf = {distillationColumn/Kaeser:2006.pdf},
+  review = {Neste artigo, o foco é a energia. Alternativas de integração energética
+	para reduzir o consumo de energia em uma coluna de destilação. Porém,
+	diz-se na literatura que quanto maior o grau de integração de energia
+	mais prejudicada fica a eficiência desse processo. Assim, o artigo
+	estuda uma maneira de quantificar esta relação.
+	
+	Um trabalho experimental foi realizado com uma coluna com um prato
+	central com troca de calor, uma forma de poupar energia. Como conclusão,
+	a Emv aumenta com o fornecimento de calor ao prato diabático e diminui
+	com a retirada de calor. Este efeito é devido à variação na vazão
+	de vapor.
+	
+	
+	Não foi referenciado.},
+  timestamp = {2006.08.18}
+}
+
+@ARTICLE{Karacan:1998,
+  author = {S. Karacan and Y. Cabbar and M. Alpbaz and H. Hapoglu},
+  title = {The steady-state and dynamic analysis of packed distillation column
+	based on partial differential approach},
+  journal = {Chemical Engineering and Processing},
+  year = {1998},
+  volume = {37},
+  pages = {379--388},
+  abstract = {The steady-state and dynamic behavior of a binary packed distillation
+	column has been simulated using the two film back-mixing model. The
+	model solution has been obtained employing orthogonal collocation
+	on finite elements. The approach using the Legendre or Jacobi polynomial
+	has been tested on the solution of related models. A pilot plant
+	scaled packed distillation
+	
+	column distilling methanol-water mixture was used for experimental
+	work. The variation of overhead and bottom temperatures have been
+	monitored by an on-line computer control system. A number of comparisons
+	have been made between the results predicted in this work from back
+	mixing model based on the two film theory and those obtained experimentally.
+	In most cases the prediction of this work gave results which were
+	closer to experiment than other numerical solutions, showing that
+	Legendre polynomials for orthogonal collocation on finite element
+	can be applied effectively to simulate the packed distillation column
+	by using a partial differential approach.},
+  comment = {Apenas versão eletrônica.},
+  keywords = {Packed distillation column; Modeling; Orthogonal collocation; Finite
+	element},
+  owner = {Paula},
+  pdf = {distillationColumn/Karacan:1998.pdf},
+  review = {Não foi referenciado.},
+  timestamp = {2006.08.24}
+}
+
+@BOOK{Khoury:2005,
+  title = {Multistage Separation Processes},
+  publisher = {CRC Press},
+  year = {2005},
+  author = {Fouad M. Khoury},
+  edition = {Third Edition},
+  owner = {Paula},
+  pdf = {distillationColumn/Khoury:2000.pdf},
+  timestamp = {2007.03.20}
+}
+
+@ARTICLE{Kienle:2000,
+  author = {Achim Kienle},
+  title = {Low-order dynamic models for ideal multicomponent distillation processes
+	using nonlinear wave propagation theory},
+  journal = {Chemical Engineering Science},
+  year = {2000},
+  volume = {55},
+  pages = {1817--1828},
+  abstract = {A new approach to the development of low-order dynamic models for
+	multicomponent distillation processes is presented. This approach
+	makes direct use of well-known spatio-temporal pattern formation
+	phenomena also termed as nonlinear wave propagation. It takes into
+	account the typical features of multicomponent systems, i.e. coexistence
+	of di!erent constant pattern waves within a single section of a distillation
+	column and the resulting wave interactions. In a first step, constant
+	molar holdups and flow rates, constant pressure and constant relative
+	volatilities are assumed. Under these conditions a rigorous analytical
+	treatment is possible and a comparably simple but sound and robust
+	method for nonlinear model reduction is developed. The approach applies
+	to packed as well as staged columns provided the number of column
+	stages is suficiently large. Application is demonstrated for two
+	di!erent distillation processes with a three and a five component
+	mixture, respectively. It is shown that the dynamic behaviour of
+	the low-order model is in good agreement with corresponding reference
+	model for a large set of operating conditions. Finally, extensions
+	of the present approach to processes with variable molar flow rates
+	as well as variable volatilities are discussed.},
+  comment = {Apenas versão eletrônica.},
+  keywords = {Low-order model; Reduced-order model; Distillation; Nonlinear wave
+	propagation; Constant pattern waves},
+  owner = {Paula},
+  pdf = {distillationColumn/Kienle:2000.pdf},
+  review = {Não foi referenciado.},
+  timestamp = {2006.08.24}
+}
+
+@ARTICLE{Kim:1999,
+  author = {Y. H. Kim},
+  title = {Optimal design and operation of a multi-product batch distillation
+	column using dynamic model},
+  journal = CEP,
+  year = {1999},
+  volume = {38},
+  pages = {61--72},
+  abstract = {Although the operation of a batch distillation column involves dynamic
+	behavior from the beginning to the end, the quasi-steady state model
+	or the short-cut method has been widely implemented in the design
+	of the column owing to simple computation in spite of the expected
+	discrepancy with real process operation. In this study, a dynamic
+	process model is utilized in the optimal design of the batch distillation
+	process and the successive quadratic programming is employed as an
+	optimization procedure. A ternary system is examined to see that
+	the dynamic model design gives a significant improvement, especially
+	for the operation having a dynamic manipulation of reflux ratio.
+	The outcome of the optimization for the example system indicates
+	that more amount of product with less operation time than that of
+	the quasi-steady model is available. In addition, the optimization
+	of net profit tells that the optimum number of trays is 23 for the
+	sample system. The optimum operation schedule of the system is also
+	obtained from the optimization of operational profit. Finally, the
+	effect of side product recycle is investigated.},
+  comment = {Versão impressa.},
+  keywords = {Process design; Batch distillation; Dynamic model; Optimal design;
+	Optimal operation},
+  owner = {Paula},
+  pdf = {distillationColumn/Kim:1999.pdf},
+  review = {O autor enfatiza que a operação de uma coluna de destilação batelada
+	tem caráter dinâmico do início ao fim, então o uso de modelos reduzidos
+	(short-cut) ou quasi-steady state podem levar a resultados menos
+	precisos.
+	
+	A otimização de uma coluna batelada passa por três objetivos:
+	
+	1)maximização do produto (destilado)
+	
+	2) minimização do tempo da batelada
+	
+	3)maximização do lucro por unidade de tempo de operação
+	
+	
+	O autor diz que a hidráulica do prato deve ser incluída na modelagem
+	utilizada na simulação para obter uma resposta real de condições
+	de operação. O artigo defende que deve ser utilizado um modelo rigoroso
+	para otimização.
+	
+	Neste artigo é implementado um modelo dinâmico para otimizar o perfil
+	de operação da uma coluna de destilação batelada. Apesar de ser dinâmico
+	os acúmulos de líquido no prato e no topo são constantes só variando
+	com o tempo o acúmulo de líquido do fundo. Para as estimativas iniciais,
+	foi construído outro modelo dinãmico com cálculos de equilíbrio via
+	UNIQUAC e não via volatilidade constante.
+	
+	O problema é resolvido via colocação ortogonal, onde as equações diferenciais
+	se tornam algébricas. Na otimização estas equações são consideradas
+	restrições.
+	
+	
+	O restante do artigo fala da formulação da função objetivo e do resultado
+	encontrado para o otimização.}
+}
+
+@ARTICLE{Kiva:1997,
+  author = {Valeri N. Kiva and Bella M. Aiukhanova},
+  title = {Multiple steady states of distillation and its realisation},
+  journal = {Computers and Chemical Engineering},
+  year = {1997},
+  volume = {21},
+  pages = {S541--S546},
+  number = {Suppl.},
+  abstract = {Multiplicity of steady states is known for distillation of mixtures
+	with certain type of distillation line map. This paper presents the
+	study of its realisation for the ternary mixture with one binary
+	azeotrope formed between light and heavy component. Continuous single-feed
+	distillation column with a finite number of trays is considered.
+	The steady states are determined by simulation of the dynamic process
+	where the initial composition profile is the result of certain operating
+	policy. There is a range of parameters where distinct operating policies
+	give distinctly different product compositions. The paper concludes
+	with a discussion of the ways to obtain and to maintain a desired
+	steady state and to restore it in case of disruption.},
+  comment = {Apenas versão eletrônica.},
+  owner = {Paula},
+  pdf = {distillationColumn/Kiva:1997.pdf},
+  review = {Não foi referenciado.},
+  timestamp = {2006.08.18}
+}
+
+@MASTERSTHESIS{Klingberg:2000,
+  author = {A. Klingberg},
+  title = {Modeling and Optimization of Batch Distillation},
+  school = {Department of Automatic Control, Lund Institute of Technology},
+  year = {2000},
+  address = {Lund, Sweden},
+  month = Feb,
+  abstract = {The detailed dynamic modelling, simulation and optimisation of a batch
+	distillation process at Bayer AG is presented. The model considers
+	a mixture of 10 components separated in a 40 tray column. Simulations
+	performed in the process modelling tool gPROMS proved that themodel
+	gives a very accurate description of the process behaviour. To increase
+	the profit of the process an optimisation of the operating procedure
+	was performed, with the reflux ratio as the only control variable.
+	The optimisation resulted in an increased profit, i.e. the product
+	yield was increased while at the same time production time was decreased.
+	Another optimisation was performed to account for the periodicity
+	of the process, by optimising the initial conditions of the batch.
+	These depend on the amount of fresh feed and the amount and composition
+	of material which is recycled from the intermediate cut and mixed
+	with the fresh feed. This optimisation also resulted in an increased
+	profit. Overall, gPROMS proved to be a powerful tool for solving
+	optimisation problems of large scale models of great complexity such
+	as the batch distillation process.},
+  comment = {Versão impressa.},
+  owner = {Paula},
+  pdf = {distillationColumn/Klingberg:2000.pdf},
+  review = {A dissertação está baseada na modelagem de uma coluna de destilação
+	batelada em gPROMS, sua simulação e otimização. O objetivo da otimização
+	era maximizar o lucro da operação: minimizando o tempo de batelada
+	e ao mesmo tempo maximizando o rendimento do produto. Os resultados
+	obtidos no gPROMS foram comparados com o programa SPEEDUP da Aspen
+	e com o programa de otimização DYNOPT da RWTH Aachen.
+	
+	Na seção 2, o processo utilizado como exemplo é explicado.
+	
+	Na seção 3, o modelo é descrito.
+	
+	Na seção 4, as características do gPROMS. Dentro destas características,
+	é apresentada a inexistência da condicional da linguagem do gPROMS.
+	Para sanar esta deficiência é apresentada a função tanh(bx+1)/2.
+	
+	Na seção 5, é montado o problema de otimização.
+	
+	Na seção 6, a simulação da coluna e seus procedimentos.
+	
+	Na seção 7, a otimização do sistema.
+	
+	Na seção 8, é explicado como uma batelada influencia outra através
+	da reintrodução sucessiva do corte intermediário nas bateladas.
+	
+	Na seção 9, são apresentadas as conclusões.
+	
+	No apêndice A é mostrada uma composição típica da carga.
+	
+	No apêndice B são apresentadas as equações do modelo.}
+}
+
+@ARTICLE{Koeijer:2004,
+  author = {Gelein M. de Koeijer and Signe Kjelstrup},
+  title = {Application of Irreversible Thermodynamics to Distillation},
+  journal = {Int. J. of Thermodynamics},
+  year = {2004},
+  volume = {7},
+  pages = {107--114},
+  number = {3},
+  month = {September},
+  abstract = {We compare three different ways of modelling tray distillation to
+	each other, and to experimental data: the most common way that assumes
+	equilibrium between the liquid and vapour phases at the outlets of
+	each tray, and two more precise methods that use irreversible thermodynamics.
+	Irreversible thermodynamics determines the driving forces and fluxes
+	of a system in agreement with the second law. It is shown that the
+	methods using irreversible thermodynamics (Maxwell-Stefan equations)
+	are superior to the method that assumes that equilibrium is reached
+	on each tray. The Soret effect must be included to have a good description
+	of the heat flux.},
+  comment = {Versão impressa.},
+  keywords = {Irreversible Thermodynamics, Distillation, Maxwell-Stefan Equation,
+	Soret/Dufour effects, Interface},
+  owner = {Paula},
+  pdf = {distillationColumn/Koeijer:2004.pdf},
+  review = {O artigo apresenta uma boa introdução sobre destilação e sobre eficiência
+	de Murphree.
+	
+	"In irreversible thermodynamics the fluxes and forces of the system
+	are derived in a systematic way: All possible coupling effects can
+	be included, or discarded, within a framework that complies with
+	the second law."
+	
+	
+	"Instead of assuming equilibrium between the liquid and vapour at
+	the outlets of each tray, in the Maxwell-Stefan approach one introduces
+	a liquid film and a vapour film with gradients in temperature and
+	concentration. The films meet at the interface, where equilibrium
+	is assumed between the vapour and liquid, however."
+	
+	
+	"This work compares the performance of the Maxwell-Stefan approach,
+	the interface integrated approach and the model assuming equilibrium
+	reached on each tray for a binary tray distillation column that separates
+	water and ethanol."
+	
+	
+	Na introdução, o artigo apresenta os principais métodos de modelagem
+	de colunas existentes na literatura.
+	
+	
+	A modelagem proposta no artigo é baseada no balanço de entropia. Esta
+	modelagem é uma alternativa mais rigorosa que a modelagem baseada
+	em equilíbrio.
+	
+	
+	ARTIGO MUITO INTERESSANTE, QUE CONTÉM UMA BOA DESCRIÇÃO DOS MÉTODOS
+	DE MODELAGEM DE PRATOS REAIS.},
+  timestamp = {2006.08.18}
+}
+
+@PHDTHESIS{Kooijman:1995a,
+  author = {Hendrik Adriaan Kooijman},
+  title = {Dynamic Nonequilibrium Column Simulation},
+  school = {Clarkson University},
+  year = {1995},
+  month = {February},
+  abstract = {Simulation of distillation columns usually is carried out using an
+	equilibrium model based on the assumption that thermodynamic and
+	thermal equilibrium exists on each tray in the column. To deal with
+	departures from thermodynamic equilibrium it is common practice to
+	specify an efficiency that is the same for all components on all
+	stages. However, component efficiencies are not equal in systems
+	with more than two components and cannot be correlated, especially
+	for nonideal systems. This makes the equilibrium model inappropriate
+	for dynamic simulations where these efficiencies are subject to change
+	and cannot be specified beforehand. Using constant efficiencies neglects
+	the influence of the tray hydrodynamics on the mass transfer and
+	the consequences for the column dynamics. Additionally, in certain
+	column operations there is a departure from thermal equilibrium which
+	cannot be modeled with the equilibrium model either.
+	
+	In this thesis a nonequilibrium model for the dynamic simulation of
+	distillation columns is described. The nonequilibrium model incorporates
+	the rigorous calculation of the mass and energy transfer rates and
+	avoids the use of efficiencies. The influence of mass transfer correlations
+	on column dynamics has been investigated. A new design mode is implemented
+	that eliminates the need for a previously known column layout in
+	order to do a nonequilibrium (dynamic) simulation, which enlarges
+	the range of application of the model. Alternative plug-flow models
+	are proposed to improve the modeling of mass transfer on large trays.},
+  comment = {Versão impressa.},
+  owner = {Paula},
+  pdf = {distillationColumn/Kooijman:1995a.pdf},
+  review = {No capítulo 1 é dada uma boa introdução a cerca da modelagem dinâmica
+	e especialmente, de colunas de destilação.
+	
+	No capítulo 2 a modelagem estacionária de não equilíbrio é mostrada,
+	assim como equações para perda de carga e hidráulica.
+	
+	O capítulo 3 fala do mesmo assunto retratado na referência Kooijman:1995.
+	
+	No capítulo 4, o modelo dinâmico de não equilíbrio
+	
+	No 5, as simulações e seus resultados são apresentados.
+	
+	No 6, as conclusões.
+	
+	No Apêndice A são mostradas correlações.},
+  timestamp = {2006.08.21}
+}
+
+@ARTICLE{Kooijman:1995,
+  author = {Hendrik A. Kooijman and Ross Taylor},
+  title = {Modelling mass transfer in Multicomponent distillation},
+  journal = {The Chemical Engineering Journal},
+  year = {1995},
+  volume = {57},
+  pages = {177--188},
+  abstract = {This paper highlights inconsistencies in the modelling of mass tranfer
+	in multicomponent distillation columns. Models of flow and mass tranfer
+	are developed that seek to avoid this inconsistencies based on the
+	usual assumptions of plug flow of vapor and plug flow or axial dispersion
+	of the liquid. These models are used together with a nonequilibrium
+	model of trayed distillation column. It is shown that the revised
+	models as capable of sensible predictions of column performance.
+	Methods of evaluating binary (Maxwell-Stephan) mass transfer coefficients
+	are evaluated and it is found that mass transfer on sieve trays is
+	best modelled with Chan and Fair correlation. Mass transfer in multicomponent
+	distillation should be modelled using the Maxwell-Stephan equations;
+	simpler approaches may be significantly less demanding of computer
+	time but column design based on such methods can be very different
+	from those obtained using the more rigorous approach.},
+  comment = {Apenas versão eletrônica.},
+  keywords = {Mass tranfer; Multicomponent distillation},
+  owner = {Paula},
+  pdf = {distillationColumn/Kooijman:1995.pdf},
+  review = {" A nonequilibrium model uses separeted balances of the (two) phases
+	which are coupled through terms for the interphase mass transfer
+	rates."
+	
+	Toda a modelagem rigorosa é mostrada (fluxos de vapor e líquido, equações
+	de transferência de massa......)
+	
+	
+	São feitas simulações para avaliar o cálculo da eficiência de Murphree
+	variando as vazões e a forma de mistura das fases (mistura perfeita,
+	plug flow, dispersão).
+	
+	As principais contribuições do artigo são uma nova proposição de modelo
+	para plug-flow e dispersão nas fases líquidas e vapor. Também a discussão
+	a cerca do cálculo dos coeficientes binários de troca de massa. O
+	método de Maxwell-Stephan foi discutido e tido como muito pesado
+	computacionalmente.},
+  timestamp = {2006.08.21}
+}
+
+@ARTICLE{Laurance:1974,
+  author = {D. R. Laurance and G.W.Swift},
+  journal = {J.Chem.Eng.Data},
+  year = {1974},
+  volume = {19},
+  pages = {61},
+  owner = {Paula},
+  timestamp = {2007.09.10}
+}
+
+@ARTICLE{Lee:1998,
+  author = {Jin-Ho Lee and M.P. Dudukovic},
+  title = {A comparison of the equilibrium and nonequilibrium models for a multicomponent
+	reactive distillation column},
+  journal = {Computers and Chemical Engineering},
+  year = {1998},
+  volume = {23},
+  pages = {159--172},
+  abstract = {Appropriate models and computational algorithms were developed and
+	a series of simulations for a reactive distillation tray column were
+	performed in order to compare the equilibrium and nonequilibrium
+	model. The homogeneous liquid phase reversible reaction between acetic
+	acid and ethanol in production of ethyl acetate was employed as a
+	test chemical reaction. Both the Newton-Raphson and homotopy-continuation
+	methods were applied to solve the set of model equations. The homotopy-continuation
+	method was found superior to the Newton-Raphson method in guaranteeing
+	the desired solution for the nonequilibrium model. The comparison
+	between the equilibrium and the nonequilibrium model reveals that
+	the nonequilibrium model is to be preferred for the simulation of
+	a tray column for reactive distillation because of the dificulty
+	in the accurate prediction of tray eficiency for the equilibrium
+	model. Close agreement in the prediction of the two models arises
+	only when the tray eficiency can be correctly guessed for the equilibrium
+	model. The efects of reaction rate and reflux ratio on the column
+	performance were illustrated using the nonequilibrium model. The
+	use of the heat generated by the exothermic reaction as an internal
+	heat source in the column is discussed.},
+  comment = {Versão Impressa.},
+  keywords = {Reactive distillation; Nonequilibrium model; Homotopy-continuation
+	method; Ethyl acetate; Equilibrium model; Newton method},
+  owner = {Paula},
+  pdf = {reactivedistillation/Lee:1998.pdf},
+  timestamp = {2006.08.25}
+}
+
+@ARTICLE{Liu:2000,
+  author = {C. J. Liu and X. G. Yuan and K. T. Yu and X. J. Zhu},
+  title = {A fluid-dynamic model for flow pattern on a distillation tray},
+  journal = {Chemical Engineering Science},
+  year = {2000},
+  volume = {55},
+  pages = {2287--2294},
+  abstract = {A fluid-dynamic model for describing the liquid-phase flow on a sieve
+	tray with consideration of both the resistance and the bubbling efect
+	created by the uprising vapor phase is presented, and solved numerically
+	by the method of control volume. For verifying the proposed model,
+	the liquid velocity distributions on a sieve tray were measured by
+	the hot-film anemometry. The theoretical predictions by present model
+	are in agreement with the experimental results by the authors and
+	from the literature.},
+  comment = {Apenas versão eletrônica.},
+  keywords = {Distillation; Fluid mechanics; Mathematical modeling; Multiphase flow;
+	Flow pattern on a distillation tray; Local velocity measurement},
+  owner = {Paula},
+  pdf = {distillationColumn/Liu:2000.pdf},
+  review = {Não foi referenciado.},
+  timestamp = {2006.08.21}
+}
+
+@BOOK{Lockett:1986,
+  title = {Distillation tray fundamentals},
+  publisher = {Press Syndicate of the University of Cambridge},
+  year = {1986},
+  editor = {Cambridge University Press},
+  author = {M. J. Lockett},
+  address = {New York},
+  comment = {Apenas versão impressa.},
+  owner = {Paula}
+}
+
+@ARTICLE{Luyben:2006,
+  author = {William L. Luyben},
+  title = {Evaluation of criteria for selecting temperature control trays in
+	distillation columns},
+  journal = {Journal of Process Control},
+  year = {2006},
+  volume = {16},
+  pages = {115--134},
+  abstract = {The use of tray temperatures to infer compositions is widespread in
+	distillation control. A number of criteria have been proposed for
+	selecting which trays to hold at constant temperature. The most commonly
+	used are (1) choosing a tray where there are large changes in temperature
+	from tray to tray ("slope" of the temperature profile), (2) finding
+	the tray where there is the largest change in temperature for a change
+	in the manipulated variable ("sensitivity"), (3) using singular value
+	decomposition (SVD) analysis, (4) selecting the tray where the temperature
+	does not change as feed composition changes while producing the desired
+	distillate and bottoms purities and (5) choosing the tray that produces
+	the smallest changes in product purities when it is held constant
+	in the face of feed composition disturbances. 
+	
+	This paper provides a quantitative comparison of the effectiveness
+	of these five alternative criteria. Several systems are considered,
+	ranging from ideal binary to azeotropic multi-component. Results
+	show that SVD analysis provides a simple and effective method for
+	selecting temperature control tray location.},
+  comment = {Apenas versão eletrônica.},
+  owner = {Paula},
+  pdf = {distillationColumn/Luyben:2006.pdf},
+  review = {Não foi referenciado.},
+  timestamp = {2006.08.21}
+}
+
+@ARTICLE{McKay:1997,
+  author = {Ben McKay and Mark Willis and Geoffrey Barton},
+  title = {Steady-state modelling of chemical process systems using genetic
+	programming},
+  journal = {Computers and Chemical Engineering},
+  year = {1997},
+  volume = {21},
+  pages = {981--996},
+  number = {9},
+  abstract = {Complex processes are often modelled using input-output data from
+	experimental tests. Regression and neural network modelling techniques
+	are commonly used for this purpose. Unfortunately, these methods
+	provide minimal information about the model structure required to
+	accurately represent process characteristics. In this contribution,
+	we propose the use of Genetic Programming (GP) as a method for developing
+	input-output process models from experimental data. GP performs symbolic
+	regression, determining both the structure and the complexity of
+	the model during its evolution. This has the advantage that no a
+	priori modelling assumptions have to be made. Moreover, the technique
+	can discriminate between relevant and irrelevant process inputs,
+	yielding parsimonious model structures that accurately represent
+	process characteristics. Following a tutorial example, the usefulness
+	of the technique is
+	
+	demonstrated by the development of steady-state models for two typical
+	processes, a vacuum distillation column and a chemical reactor system.
+	A statistical analysis procedure is used to aid in the assessment
+	of GP algorithm settings and to guide in the selection of the final
+	model structure.},
+  comment = {Apenas versão eletrônica.},
+  keywords = {genetic programming; symbolic regression; process modelling},
+  owner = {Paula},
+  pdf = {distillationColumn/McKay:1997.pdf},
+  review = {Não foi referenciado.},
+  timestamp = {2006.08.24}
+}
+
+@ARTICLE{Mehlhorn:1996,
+  author = {Arndt Mehlhorn and Antonio Espuña and Ana Bonsfills and Andrzej Gorak
+	and Luis Puigjaner},
+  title = {Modelling and Experimental Validation of both mass transfer and tray
+	hydraulics in batch distillation},
+  journal = {Computers and Chemical Engineering},
+  year = {1996},
+  volume = {20},
+  pages = {S575--S580},
+  number = {Suppl.},
+  abstract = {A sinmlation model for batch distillation in colunms with perforated
+	plates has been devdoped. Its novelty consists in the use of both
+	the non-equilibrium and the equilibrium model making up together
+	a better integrated model. The motivation for the building-up of
+	the new model has been pointed out by Voigtlander (Voigtlander,1994)
+	where some shortcomings of the nonequilibrium stage model of Krishnamurthy
+	and Taylor (Krishnamurth) et a1.,1985) have been claimed. In this
+	model no detailed accounting for the plate hydraulics is possible.
+	Simulation runs have been made and are compared with experimental
+	results.},
+  comment = {Apenas versão eletrônica.},
+  owner = {Paula},
+  pdf = {distillationColumn/Mehlhorn:1996.pdf},
+  review = {"The rigorous simulation of distillation with a nonequilibrium model
+	has been described by Krishnamurthy and Taylor (Krislmamurthy et
+	al., 1985). The main motivation for the launch of this model is to
+	avoid the calculation of the separation process by use of stage efficiencies.
+	Stage efficiencies do not have any physical explanation and must
+	be measured. As they are not the same for each component the calculation
+	of multicomponent separation processes might be faulty."},
+  timestamp = {2006.08.21}
+}
+
+@ARTICLE{Mortaheb:2002,
+  author = {H.R. Mortaheb and H. Kosuge and K. Asano},
+  title = {Hydrodynamics and mass transfer in heterogeneous distillation with
+	sieve tray column},
+  journal = {Chemical Engineering Journal},
+  year = {2002},
+  volume = {88},
+  pages = {59--69},
+  abstract = {Hydrodynamics and separation performance of a sieve tray column in
+	heterogeneous distillation are studied experimentally under total
+	reflux conditions. A correlation for clear liquid height in the heterogeneous
+	liquid region is obtained by modifying the correlation of the homogeneous
+	systems. The volumetric dimensionless diffusion fluxes in the heterogeneous
+	liquid region are smaller than those in the homogeneous liquid region.
+	This may be due to the mass transfer resistance in the liquid phases.
+	
+	In order to examine the effect of liquid-phase resistance on separation
+	performance, a simulation is carried out by either considering or
+	neglecting the liquid-phase resistance. The simulation shows that
+	the liquid-phase resistance affects the vapor-phase concentration
+	driving forces, volumetric diffusion fluxes and convective mass flux
+	in the heterogeneous liquid region. It also shows that the predicted
+	top vapor
+	
+	concentrations and flow rate are in reasonable agreement with the
+	experimental data in the heterogeneous liquid region by considering
+	the liquid-phase mass transfer resistance.},
+  comment = {Apenas versão eletrônica.},
+  keywords = {Heterogeneous distillation; Sieve tray; Clear liquid height; Diffusion
+	flux; Liquid-phase resistance},
+  owner = {Paula},
+  pdf = {distillationColumn/Mortaheb:2002.pdf},
+  review = {"Heterogeneous distillation is involved in several industrial processes.
+	Steam distillation and heterogeneous azeotropic distillation, which
+	is used for separation of mixtures that are hardly separated by conventional
+	distillation methods, are two examples of the heterogeneous distillation
+	processes."},
+  timestamp = {2006.08.21}
+}
+
+@ARTICLE{Musch:1993,
+  author = {H. -E. Musch and M. Steiner},
+  title = {Order Reduction of Rigorous Dynamic Models for Distillation Columns},
+  journal = {Computers and Chemical Engineering},
+  year = {1993},
+  volume = {17},
+  pages = {S311--S316},
+  number = {Suppl.},
+  abstract = {A method for order reduction of rigorous dynamic models of distillation
+	columns is presented. The approach is a modification and extension
+	of the comportamental models presented in 1986 by Benallou et. al.
+	Formulating the algebraic equations and the differential equations
+	for total holdup for the compartments, but keeping the differential
+	equations for concentration dynamics for each tray, Murphree tray
+	efficiencies can be used and response accuracy increased. The resulting
+	models of substantially lower order show good dynamic and steady-state
+	conformity with the complete rigorous model. The example of an industrial
+	binary distillation column will demonstrate the effectiveness of
+	this approach.},
+  comment = {Somente verão impressa. Cópia realizada na cientec.},
+  keywords = {Distillation columns; order reduction; compartmental models; dynamic
+	simulation; differential-algebraic},
+  owner = {Paula},
+  timestamp = {2006.09.02}
+}
+
+@ARTICLE{Muller:2000,
+  author = {Niels P. Müller and Hugo Segura},
+  title = {An overall rate-based stage model for cross flow distillation columns},
+  journal = {Chemical Engineering Science},
+  year = {2000},
+  volume = {55},
+  pages = {2515--2528},
+  abstract = {In this work a nonequilibrium stage model for cross flow distillation
+	columns is developed. Concentration gradients on trays are integrated
+	analytically for simple flow patterns on the basis of an overall
+	rate approach. Empirical mixing corrections for bulk and interface
+	concentrations and the assumption of constant interface properties
+	of other nonequilibrium stage (NEQ) models are completely avoided.
+	Simulations were carried out for two distillation cases of non-ideal
+	mixtures. The importance of flow modelling on separation is shown
+	and compared with mass transfer cross e!ects. Calculated separations
+	for distillation trays, over a wide range of operating conditions,
+	suggest that the proposed model provides a better approximation of
+	concentration profiles, compared with the multicomponent eficiency
+	(MEF) and the NEQ stage model. It is also shown that the eficiency-based
+	model may predict incorrect mass transfer directions for trace components;
+	this behaviour is caused by neglecting the convective contribution
+	in the calculation of multicomponent mass transfer rates.},
+  comment = {Apenas versão eletrônica.},
+  keywords = {Distillation; Nonequilibrium stage model; Multicomponent eficiency},
+  owner = {Paula},
+  pdf = {distillationColumn/Muller:2000.pdf},
+  review = {"Advances in multicomponent mass transfer theory and the development
+	of convenient matrix methods have lead to more realistic stage models,
+	known as rate-based models, which use multicomponent mass transfer
+	rates rather than empirical eficiency factors, so as to incorporate
+	nonequilibrium e!ects."
+	
+	"The NEQ stage is a lumped variable model, where conservation equations
+	are written separately for each phase and the interface as a whole,
+	and then solved together with constitutive transport equations. Mixing
+	and flow e!ects are considered empirically in the calculation of
+	the driving force for mass transfer, where bulk concentrations are
+	averaged between inlet and outlet conditions using arbitrary mixing
+	parameters. This approach is rigorous only for completely mixed liquid
+	and vapour phases, being fundamentally wrong and inadequate for industrial-scale
+	trays, as pointed out by Kooijman and Taylor (1995)."},
+  timestamp = {2006.08.21}
+}
+
+@BOOK{Shankar:1999,
+  title = {Data Reconciliation and Gross Error Detection: An Intelligent Use
+	of Process Data},
+  publisher = {Gulf Professional Publishing},
+  year = {1999},
+  author = {Narasimhan, Shankar and Jordache, Cornelius},
+  month = {November},
+  isbn = {0884152553}
+}
+
+@ARTICLE{Olsen:1997,
+  author = {I. Olsen and G. O. Endrestol and T. Sira},
+  title = {A Rigorous and Efficient Distillation Column Model for Engineering
+	and Training Simulators},
+  journal = CCE,
+  year = {1997},
+  volume = {21},
+  pages = {S193--S198},
+  number = {Suppl},
+  abstract = {A comprehensive dynamic distillation column model has been developed
+	and implemented in the commercial simulator package ProSim. The effectiveness
+	and robustness of the model has been proven through several deliveries
+	of operator training simulators as well as engineering simulators
+	to the process industry. The present paper describes the main model
+	equations and the applied solution method. The implemented algorithm
+	allows the column model to be combined with a large number of other
+	process and instrumentation models in simulators running in real-time
+	or faster, with a time step of typically one second. Rigorous equations
+	are used for material and energy balances on each tray, together
+	with hydraulic correlations describing internal liquid and vapour
+	flows. Liquid flows along the column are determined by a single pass
+	semi-implicit method where flow influences on liquid levels at the
+	tray below are approximately taken into account. Internal vapour
+	flows are calculated simultaneously with the solution of mass and
+	energy balance equations. The method used is a multi pass shooting
+	algorithm where the bottom pressure is adjusted to obtain a given
+	overhead vapour flow.},
+  comment = {Versão impressa.},
+  owner = {Paula},
+  pdf = {distillationColumn/Olsen:1997.pdf},
+  review = {O artigo apresenta uma modelagem rigorosa, mas com o balanço de energia
+	em função da entalpia e não da energia interna. O autor diz que essa
+	simplificação não leva a grandes erros desde que o sistema não opere
+	em pressões muito elevadas.
+	
+	Como exemplo, é simulado uma unidade com duas colunas de destilação
+	e outros acessórios resultado em um sistema com 226.000 variáveis,
+	97.000 parâmetros e 2.200 especificações. Utilizando o método de
+	resolução proposto (com a divisão das equações em grupos e resolvidas
+	alternativamente), o sistema pode ser simulado em tempo real.}
+}
+
+@ARTICLE{Osorio:2004,
+  author = {D. Osorio and R. Pérez-Correa and A. Belancic and E. Agosin},
+  title = {Rigorous dynamic modeling and simulation of wine distillations},
+  journal = FC,
+  year = {2004},
+  volume = {15},
+  pages = {515--521},
+  abstract = {A novel simulation strategy for dynamic distillation of complex mixtures,
+	such as wine, is proposed and evaluated in terms of computing efficiency
+	and accuracy. The model developed describes wine distillation as
+	a multicomponent reactive batch distillation process. The simulation
+	approach transforms the system of differential algebraic equations
+	(DAE) into a set of ordinary differential equations, by pre-solving
+	the algebraic equations and replacing them with artificial neural
+	networks. This new simulation strategy for wine distillation is 40%
+	faster than the rigorous solution of the DAE system, compared at
+	the same level of accuracy. The model can be applied to the distillation
+	of other spirits or complex mixtures, as well as in other separation
+	processes in which the recovery of aromas is essential.},
+  comment = {Versão impressa.},
+  keywords = {Reactive-batch distillation; Terpenes; Pisco},
+  owner = {Paula},
+  pdf = {distillationColumn/Osorio:2004.pdf},
+  review = {Neste artigo, o autor propõe o uso de redes neurais em combinação
+	com o método DDD (direct dynamic derivatives) na resolução de sistemas
+	DAE gerados na modelagem de colunas de destilação batelada.
+	
+	Na modelagem, é considerado um termo de reação que acontece somente
+	na fase líquida.
+	
+	
+	Resumindo, o modelo rigoroso é misturado a um modelo empírico, gerado
+	pelas variáveis algébricas de VLE via rede neural, para evitar a
+	resolução do sistema como um DAE.
+	
+	
+	Os resultados de simulações com esta mescla de modelos é praticamente
+	idêntico ao resultado de um modelo rigoroso resolvido normalmente
+	com solver DAE.}
+}
+
+@MANUAL{Pelegrini:2006,
+  title = {EMSO Manual},
+  author = {Rafael de Pelegrini Soares},
+  month = {September},
+  year = {2006},
+  comment = {Versão eletrônica.},
+  owner = {Paula},
+  timestamp = {2006.10.13}
+}
+
+@MASTERSTHESIS{Pelegrini:2003,
+  author = {Rafael de Pelegrini Soares},
+  title = {Desenvolvimento de um Simulador Genérico de Processos Dinâmicos},
+  school = {PPGEQ- UFRGS},
+  year = {2003},
+  comment = {Versão impressa.},
+  owner = {Paula},
+  timestamp = {2006.10.11}
+}
+
+@ARTICLE{Peng:2003,
+  author = {Jianjun Peng and Thomas F. Edgar and R. Bruce Eldridge},
+  title = {Dynamic rate-based and equilibrium models for a packed reactive distillation
+	column},
+  journal = {Chemical Engineering Science},
+  year = {2003},
+  volume = {58},
+  pages = {2671--2680},
+  abstract = {Dynamic rate-based and equilibrium models were developed for a packed
+	reactive distillation column for the production of tert-amyl methyl
+	ether (TAME). The two types of models, consisting of diferential
+	algebraic equations, were implemented in gPROMS and dynamic simulations
+	were carried out to study the dynamic behaviour of reactive distillation
+	of the TAME system. The dynamic responses predicted by the two types
+	of models are similar in general, with some diferences in steady-state
+	values. The influence of manipulated variables, such as distillate
+	flow rate, reflux ratio, and reboiler duty, on the dynamic responses
+	of the controlled variables (reactant conversion and product purity)
+	was studied. The dynamic response of reactant conversion is very
+	nonlinear and unconventional, but the response of product purity
+	is well approximated by a linear first-order diferential equation.
+	The CPU time required to complete a dynamic simulation of the rate-based
+	model is at least an order of magnitude higher than that for the
+	equilibrium model. Therefore, the dynamic rate-based model is much
+	more complicated than the equilibrium model, and simplification of
+	the rate-based model is necessary for the implementation of model-based
+	control. A new approach was proposed to simplify the dynamic rate-based
+	model by assuming that the mass transfer coeficients are time invariant.
+	This approach was demonstrated to be superior to the conventional
+	simplification methods. It can reduce the number of equations by
+	up to two-thirds and still accurately predicts the dynamic behaviour.},
+  comment = {apenas versão eletrônica.},
+  keywords = {Reactive distillation; Dynamic simulation; Modelling; Process control;
+	Rate-based model; Nonlinear dynamics},
+  owner = {Paula},
+  pdf = {reactivedistillation/Peng:2003.pdf},
+  timestamp = {2006.09.22}
+}
+
+@ARTICLE{Pinto:1988,
+  author = {J. C. Pinto and E. C. {Biscaia Jr.}},
+  title = {Order Reduction Strategies for Models of Staged Separation Systems},
+  journal = {CCE},
+  year = {1988},
+  volume = {12},
+  pages = {821--8318},
+  number = {3},
+  comment = {artigo impresso.},
+  owner = {Paula},
+  timestamp = {2007.08.12}
+}
+
+@MANUAL{Ltd.:2004,
+  title = {PML: Separation Library},
+  author = {{PROCESS S. E. Ltd.}},
+  organization = {Bridge Studios},
+  address = {107a Hammersmith Bridge Road, London W6 9DA},
+  month = {May},
+  year = {2004},
+  owner = {Paula},
+  timestamp = {2006.11.01}
+}
+
+@ARTICLE{Ramaswamy:2002,
+  author = {R. C. Ramaswamy and D. N. Saraf},
+  title = {Reduced Order Modeling of a Crude Distillation Unit for Online Applications},
+  journal = {Journal of Chemical Engineering of Japan},
+  year = {2002},
+  volume = {35},
+  pages = {714--728},
+  number = {8},
+  abstract = {A transport phenomena based process model is a prerequisite for supervisory
+	level online process optimization. For real time applications it
+	is necessary to have an efficient and robust solution procedure for
+	the model equations. A method for the reduction in the number of
+	model equations for a crude petroleum distillation unit is reported
+	here. The predictions from the rigorous, and several reduced order
+	models were compared with the experimental data from an operating
+	refinery. The results of the reduced order model not only compared
+	favorably with those of the rigorous model but the former was also
+	found to be more flexible to tuning with the plant data and showed
+	greater tolerance to noisy measurements as compared to the latter.
+	Use of empirical thermodynamic relations for VLE (vapor-liquid equilibrium)
+	data, and analytical derivatives, choice of independent variables
+	and numbering of stages were found to further reduce computation
+	time significantly.},
+  comment = {Apenas versão eletrônica.},
+  keywords = {Distillation; Modeling; Reduced Order Modeling; Online Applications},
+  owner = {Paula},
+  pdf = {distillationColumn/Ramaswamy:2002.pdf},
+  timestamp = {2006.08.28}
+}
+
+@ARTICLE{Ramchandran:1995,
+  author = {Soundar Ramchandran and R. Russell Rhinehartt},
+  title = {A very simple structure for neural network control of distillation},
+  journal = {Journal of Process Control},
+  year = {1995},
+  volume = {5},
+  pages = {115--128},
+  number = {2},
+  abstract = {This paper presents a novel approach for process control that uses
+	neural networks to model the steadystate inverse of a process which
+	is then coupled with a simple reference system synthesis to generate
+	a
+	
+	multivariable controller. The control strategy is applied to dynamic
+	simulations of two methanol-water distillation columns that express
+	distinctly different behaviour from each other (one simulates a lab
+	
+	column, while the second simulates an industrial-scale high-purity
+	column). A steady-state process simulation package was used to generate
+	all the neural network training data. An efficient training algorithm
+	
+	based on a nonlinear least-squares technique was used to train the
+	networks. The neural network modelbased controllers show robust performance
+	for both setpoints and disturbances, and performed better
+	
+	than conventional feedback proportional-integral (PI) controllers
+	with feedforward features.},
+  comment = {Apenas versão eletrônica.},
+  keywords = {neural networks; distillation; dynamic simulations},
+  owner = {Paula},
+  pdf = {distillationColumn/Ramchandran:1995.pdf},
+  timestamp = {2006.08.24}
+}
+
+@ARTICLE{Rao:2001,
+  author = {D.P. Rao and C.V. Goutami and S. Jain},
+  title = {A direct method for incorporation of tray-efficiency matrix in simulation
+	of multicomponent separation processes},
+  journal = {Computers and Chemical Engineering},
+  year = {2001},
+  volume = {25},
+  pages = {1141--1152},
+  abstract = {Both experimental and estimated multicomponent tray efficiencies are
+	known to become unbounded and exhibit bizarre variation from tray
+	to tray in a distillation column even for ideal systems. Besides
+	lacking the physical significance, they pose numerical difficulties
+	in computation of the component tray efficiencies from the point
+	efficiencies whenever the latter assume negative values (Lockett,
+	M. J. (1986). Distillation tray fundamentals. Cambridge: Cambridge
+	University Press). The use of the Stefan-Maxwell approach for estimation
+	of point efficiency leads to a matrix form. Recently, the tray-efficiency
+	matrix for well-mixed, dispersed and plug flow of liquid has been
+	obtained in terms of point-efficiency matrix similar to binary systems.
+	However, there are no method to use directly the tray-efficiency
+	matrix in simulation. Here, we present a method for direct incorporation
+	of the efficiency matrix in the well-known Naphtali-Sandholm method.
+	We have studied the convergence characteristics of the modified and
+	the original methods for distillation, absorption and extraction
+	columns. The results show the modified one is superior to the original
+	method.},
+  comment = {Apenas versão eletrônica.},
+  keywords = {Simulation; Distillation; Absorption; Extraction; Separations; Tray-efficiency},
+  owner = {Paula},
+  pdf = {distillationColumn/Rao:2001.pdf},
+  review = {"..., the multicomponent mass transfer theory suggests that the natural
+	extension of the Murphree tray efficiency from binary to multicomponent
+	system would take a matrix form (Taylor and Krishna, 1993). The diagonal
+	elements reflect the contacting efficiency of the phases on the tray
+	and the off-diagonal elements the multicomponent interaction effects."},
+  timestamp = {2006.08.22}
+}
+
+@ARTICLE{Rao:1995,
+  author = {D. P. Rao and R. S. Prem Kumar and P. Pandit and T. C. T. Das},
+  title = {Multicomponent tray efficiencies accounting for entrainment},
+  journal = {The Chemical Engineering Journal},
+  year = {1995},
+  volume = {57},
+  pages = {237--246},
+  abstract = {In multicomponent distillation, the component point efficiencies are
+	highly sensitive to the composition profiles and are known to exhibit
+	bizarre behavior. A major limitation of these efficiencies is the
+	fact that cannot be related to tray efficiencies for dispersed and
+	plug-flow of liquid, unless multicomponent effects are ignored -
+	these would still pose a problem if the component point efficiencies
+	assume large negative values. The Maxwell-Stephan approach to diffusion
+	on multicomponent mixtures leads to a component point efficiency
+	matrix from a point efficiency matrix for dispersed flow and plug
+	flow or a liquid phase, and accounting for entrainment. The results
+	of the simulation of the fractionation of two ideal and two non-ideal
+	mixtures indicated the superiority of the matrix approach over the
+	use of component efficiencies.},
+  comment = {Apenas versão eletrônica.},
+  keywords = {Multicomponent; Distillation; Entrainment; Composition profiles},
+  owner = {Paula},
+  pdf = {distillationColumn/Rao:1995.pdf},
+  review = {Apresenta uma introdução muito boa.
+	
+	os "rated based models" são os modelos que não dependem de uma eficiência
+	a ser setada ou calculada. São os modelos reais.
+	
+	
+	O artigo trata da estimação da eficiência de prato através da eficiência
+	de ponto para modelos de pratos reais levando em conta o arraste
+	de líquido.
+	
+	O equacionamento é apresentado.},
+  timestamp = {2006.08.21}
+}
+
+@ARTICLE{Ray:1996,
+  author = {S. Ray and S. P. Sengupta},
+  title = {Irreversibility analysis of a sieve tray in a distillation column},
+  journal = {Int. J. Heat Mass Transfer},
+  year = {1996},
+  volume = {39},
+  pages = {1535--1542},
+  number = {7},
+  abstract = {A second Law analysis has been developed for a vapor-liquid contacting
+	device as in the sieve tray of a distillation column. Using a discrete
+	bubble dynamics model, an equation for entropy balance has been formulated
+	to numerically evaluate the entropy generation rate associated with
+	heat, mass and momentum transfer for bubble movement through a moving
+	liquid pool. The entropy generation rates per unit bubble mass have
+	been evaluated for variations in sieve tray parameters like orifice
+	diameter and weir height for fixed separation characteristics of
+	components constituting the two pfiases. It has been found that among
+	the tray parameters, weir height plays a dominant role compared to
+	sieve hole diameter on entropy generation.},
+  comment = {Apenas versão eletrônica.},
+  owner = {Paula},
+  pdf = {distillationColumn/Ray:1996.pdf},
+  review = {Artigo que analisa a irreversibilidade na formação das bolhas de vapor
+	no líquido.},
+  timestamp = {2006.08.22}
+}
+
+@ARTICLE{Reepmeyer:2004,
+  author = {Frauke Reepmeyer and Jens-Uwe Repke and Günter Wozny},
+  title = {Time optimal start-up strategies for reactive distillation columns},
+  journal = {Chemical Engineering Science},
+  year = {2004},
+  volume = {59},
+  pages = {4339 --4347},
+  abstract = {In this contribution, a rigorous process model to simulate the start-up
+	of a cold and empty reactive distillation (RD) column is developed
+	and experimentally validated with a transesterification process.
+	Strategies for time optimal start-up of an RD column are presented.
+	The mostly used strategy for conventional distillation of total reflux
+	for RD is only recommendable with limitations. New, alternative strategies,
+	like the recycling of the off-spec bottom and top product or the
+	initial charging with product, to minimize the necessary start-up
+	time are presented. Suitable strategies can save up to 82% of the
+	needed time for the column start-up.},
+  comment = {Versão Impressa.},
+  keywords = {Reactive distillation; Start-up; Dynamic simulation; Ethyl acetate;
+	Transesterification},
+  owner = {Paula},
+  pdf = {reactivedistillation/Reepmeyer:2004.pdf},
+  timestamp = {2006.08.25}
+}
+
+@ARTICLE{Reepmeyer:2003,
+  author = {Frauke Reepmeyer and Jens-Uwe Repke and Günter Wozny},
+  title = {Analysis of the Start-up Process for Reactive Distillation},
+  journal = {Chemical Engineering Technology},
+  year = {2003},
+  volume = {26},
+  pages = {81--86},
+  comment = {Versão impressa.},
+  owner = {Paula},
+  pdf = {reactivedistillation/Reepmeyer:2003.pdf},
+  timestamp = {2006.08.25}
+}
+
+@ARTICLE{Resjorde:2005,
+  author = {A. Resjorde and S. Kjelstrup},
+  title = {The second lawoptimal state of a diabatic binary tray distillation
+	column},
+  journal = {Chemical Engineering Science},
+  year = {2005},
+  volume = {60},
+  pages = {1199--1210},
+  abstract = {A new numerical procedure to minimize the entropy production in diabatic
+	tray distillation columns has been developed. The method was based
+	on a least square regression of the entropy production at each tray.
+	A diabatic column is a column with heat exchangers on all trays.
+	The method was demonstrated on a distillation column separating propylene
+	from propane. The entropy production included contributions from
+	the heat transfer in the heat exchangers and the mass and heat transfer
+	between liquid and vapor inside the distillation column. It was minimized
+	for a number of binary tray distillation columns with fixed heat
+	transfer area, number of trays, and feed stream temperature and composition.
+	For the first time, the areas of heat exchange were used as variables
+	in the optimization. An analytical result is that the entropy production
+	due to heat transfer is proportional to the area of each heat exchanger
+	in the optimal state. For many distillation columns, this is equivalent
+	to a constant driving force for heat transfer. The entropy production
+	was reduced with up to 30% in the cases with large heat transfer
+	area and many trays. In large process facilities, this reduction
+	would ideally lead to 1-2GWh of saved exergy per year. The most important
+	variable in obtaining these reductions is the total heat transfer
+	area. The investigation was done with a perspective to later include
+	the column as a part in an optimization of a larger process. We found
+	that the entropy production of the column behaved almost as a quadratic
+	function when the composition of the feed stream changed. This means
+	that the feed composition is a natural, easy variable for a second
+	law optimization when the distillation column is a part of a process.
+	The entropy production was insensitive to variations in the feed
+	temperature.},
+  comment = {Apenas versão eletrônica.},
+  keywords = {Distillation; Energy; Entropy production; Mathematical; Second law;
+	Optimization},
+  owner = {Paula},
+  pdf = {distillationColumn/Resjorde:2005.pdf},
+  review = {"The aim of this work is to contribute to a better energy economy
+	of distillation by increasing the energy efficiency. Maximum efficiency
+	is found by minimizing the entropy production in diabatic columns.
+	We continue the work by De Koeijer et al. (2004), who minimized the
+	entropy production in diabatic distillation columns. We shall add
+	to earlier work and show how we can determine, by theory and calculation,
+	the optimal area of heat exchange at each tray. A new numerical solution
+	procedure shall also be reported.We will not yet include aspects
+	related to the practical implementation (like controllability and
+	cost) in this study."
+	
+	
+	O artigo mostra o equacionamento de uma forma clara.
+	
+	
+	"We observed that the entropy production of the column behaved almost
+	as a quadratic function when the composition of the feed stream changed.
+	This means that the feed composition easily can be used as variable
+	when a distillation column is part of a process optimization. Surprisingly,
+	the entropy production was almost independent of the feed temperature."},
+  timestamp = {2006.08.22}
+}
+
+@ARTICLE{Roffel:2000,
+  author = {B. Roffel and B.H.L. Betlem and J.A.F. de Ruijter},
+  title = {First principles dynamic modeling and multivariable control of a
+	cryogenic distillation column process},
+  journal = CCE,
+  year = {2000},
+  volume = {24},
+  pages = {111--123},
+  abstract = {In order to investigate the feasibility of constrained multivariable
+	control of a heat-integrated cryogenic distillation process, a rigorous
+	first principles dynamic model was developed and tested against a
+	limited number of experiments. It was found that the process variables
+	showed a large amount of interaction, which is responsible for the
+	difficulties with the presently used, PID-based, control scheme,
+	especially in load-following situations, which are common in air
+	separation plants such as for instance integrated coal gasification
+	combined cycle plants. Contrary to what is suggested in the literature,
+	it was found that vapor hold-up in low-temperature, high-pressure
+	columns does not play a significant role in the process dynamics.
+	Despite large throughput changes and non-linear process behavior,
+	multivariable model predictive control using a linearized model for
+	average operating conditions, could work well provided all process
+	flows have sufficient range. Due to the strong interactive nature
+	of the process variables, process changes have to be made slowly,
+	since otherwise manipulated variables easily saturate and process
+	output targets cannot be maintained.},
+  comment = {Versão impressa.},
+  keywords = {Dynamic modeling; Multivariable control; Cryogenic distillation},
+  owner = {Paula},
+  pdf = {distillationColumn/Roffel:2000.pdf},
+  review = {Destilação criogênica é semelhante à destilação convencional, mas
+	acontece em baixíssimas temperaturas. Ela é necessária quando se
+	quer separar ar, por exemplo, em oxigênio e nitrogênio. Apenas em
+	temperaturas na ordem de 100K (-173°C) estes componentes se tornam
+	líquidos e podem ser separados.
+	
+	
+	A coluna de destilação criogênica apresenta uma configuração diferente.
+	O condensador e o refervedor são integrados e se encontram no meio
+	da coluna dividindo a mesma em duas. Estas "duas colunas" têm a sua
+	operação em diferentes pressões, sendo a parte inferior com maior
+	pressão e a parte superior com nemor pressão.
+	
+	A modelagem do condensador/refervedor é apresentada.
+	
+	Testes são feitos para provar que o efeito da desconsideração do acúmulo
+	de vapor no prato é insignificante, ao contrário do que diz a literatura
+	para colunas que operam em altas pressões.
+	
+	
+	É feito também um estudo a cerca do controle do sistema.
+	
+	
+	ESTE ARTIGO APRESENTA UMA SÉRIE DE EQUAÇÕES DE HIDRÁULICA MUITO INTERESSANTE!!}
+}
+
+@ARTICLE{Ruiz:1988,
+  author = {C. A. Ruiz and I. T. Cameron and R. Gani},
+  title = {A Generalized Model for Distillation Columns - III - Study of Start-up
+	Operations},
+  journal = CCE,
+  year = {1988},
+  volume = {12},
+  pages = {1--14},
+  number = {1},
+  abstract = {The dynamic behavior of distillation columns during startup operations
+	have been studied and analyzed. A procedure is proposed for determining
+	appropriate startup policies for distillation column operations based
+	on the analysis of the dynamic behavior. The final startup policy
+	consists of three strategies corresponding to the three characteristic
+	stages of the stratup operation. The proposed procedure has been
+	successfully applied to a test problem. Numerical results of the
+	dynamic behavior and the test problem are presented.},
+  comment = {Foi adquirido na CIENTEC. Apenas cópia impressa.},
+  owner = {Paula},
+  review = {Neste artigo, todos os valores das variáveis básicas (de vazão, pressão,
+	etc...) são analisadas através de gráficos de simulações de partidas.
+	
+	
+	O autor divide a partida de uma coluna de destilação em três estágios.
+	São eles:
+	
+	- Estágio Discontínuo: caracterizado pelo curto período de tempo de
+	duração e pela natureza de discontinuidade de praticamente todas
+	as variáveis (principalmente as relacionadas à hidráulica)
+	
+	- Estágio Semi-Contínuo: é caracterizado pela variação não linear
+	das variáveis, mas sem descontinuidades, e pela aproximação do valor
+	estacionário das variáveis hidráulicas. Este período tem uma maior
+	duração de tempo.
+	
+	- Estágio Contínuo: é caracterizado pelo transiente linear das variáveis.
+	No final desta etapa todas as variáveis atingem o estado estacionário.
+	
+	
+	Baseado na análise dinâmica da partida, o procedimento de partida
+	de uma coluna é partido em três etapas que coincidem com os estágios
+	descritos acima. Na primeira etapa, o procedimento mais adequado
+	é o que causa o mímino de problemas de operação, garantindo que não
+	haverão descontinuidades no final deste período. Na segunda etapa
+	o sistema de controle entra em ação para que este estágio seja ultrapassado
+	com o mínimo custo de operação. No início da terceira etapa o sistema
+	de controle é ligado e o sistema é mantido em torno do estado estacionário
+	desejado.
+	
+	
+	Para obter o melhor procedimento para a partida de uma coluna, é utilizada
+	otimização.
+	
+	Aspectos numéricos são relatados.}
+}
+
+@ARTICLE{Sage:1940,
+  author = {Sage,B.H. and W.N.Lacey},
+  journal = {Industrial \& Engineering Chemistry Research},
+  year = {1940},
+  volume = {32},
+  pages = {992},
+  owner = {Paula},
+  timestamp = {2007.09.10}
+}
+
+@INPROCEEDINGS{Soares:2003,
+  author = {R. P. Soares and A. R. Secchi},
+  title = {EMSO: A New Environment for Modelling, Simulation, and Optimisation},
+  booktitle = {ESCAPE 13th},
+  year = {2003},
+  volume = {1},
+  pages = {947--952},
+  publisher = {Elsevier Science Publishers},
+  comment = {Pegar versão com o Rafael.},
+  owner = {Paula}
+}
+
+@ARTICLE{Soave:2002,
+  author = {Giorgio Soave and Josep A. Feliu},
+  title = {Saving energy in distillation towers by feed splitting},
+  journal = {Applied Thermal Engineering},
+  year = {2002},
+  volume = {22},
+  pages = {889--896},
+  abstract = {It is a common procedure to save energy in industrial distillation
+	towers by preheating the feed with heat recovered from the bottom
+	product. It will be demonstrated theoretically, and shown by simulation
+	means,
+	
+	that if, before entering the unit, the feed is split into two streams,
+	and only one of them is preheated, further savings of energy (up
+	to 50%) can be achieved. The use of a steady state process simulator
+	like Hysys is precious for a fast and reliable determination of the
+	optimum split ratio and feed tray. A typical example of application
+	is given and the use of Hysys shown. The results for the optimization
+	of the split ratio are provided showing the economical impact of
+	the proposed solution.},
+  comment = {Apenas versão eletrônica.},
+  keywords = {Energy savings; Feed splitting; Process simulation},
+  owner = {Paula},
+  pdf = {distillationColumn/Soave:2002.pdf},
+  timestamp = {2006.08.22}
+}
+
+@ARTICLE{Srivastava:1987,
+  author = {R. K. Srivastava and B. Joseph},
+  title = {Reduced-order Models for separation columns - VI. Columns with steep
+	and flat composition profiles},
+  journal = {Computers and Chemical Engineering},
+  year = {1987},
+  volume = {11},
+  pages = {165--176},
+  number = {2},
+  comment = {Apenas versão impressa. Retirado da CIENTEC.},
+  owner = {Paula},
+  timestamp = {2006.09.15}
+}
+
+@ARTICLE{Srivastava:1985,
+  author = {R. K. Srivastava and B. Joseph},
+  title = {Reduced-order Models for separation columns - V. Selections of collocation
+	points},
+  journal = {Computers and Chemical Engineering},
+  year = {1985},
+  volume = {9},
+  pages = {601--613},
+  number = {6},
+  comment = {Apenas versão impressa. Retirado da CIENTEC.},
+  owner = {Paula},
+  timestamp = {2006.09.15}
+}
+
+@ARTICLE{Stewart:1985,
+  author = {Warren E. Stewart and Keith L. Levien and Manfred Morari},
+  title = {Simulation of fractionation by orthogonal collocation},
+  journal = CES,
+  year = {1985},
+  volume = {40},
+  pages = {409--421},
+  number = {3},
+  abstract = {An orthogonal collocation method is given for rapid simulation of
+	multistage separation schemes. The grid points for each multistage
+	module are selected by a stage wise least squares ctiterion. Refinement
+	of the grid yields rapid convergence to the full stagewise solution.
+	Calculations show that the method is remarkably efficient, both for
+	steady and dynamic simulations of distillation columns.},
+  comment = {Apenas versão impressa. Retirado da CIENTEC.},
+  owner = {Paula},
+  timestamp = {2006.08.24}
+}
+
+@BOOK{Sundmacher:2003,
+  title = {Reactive Distillation - Status and Future Directions},
+  publisher = {Wiley - VCH Verlag GmbH \& Co. KGaA},
+  year = {2003},
+  editor = {Kai Sundmacher and Achim Kienle},
+  author = {Kai Sundmacher and Achim Kienle},
+  comment = {versão eletrônica.},
+  owner = {Paula},
+  pdf = {reactivedistillation/Sundmacher:2003.pdf},
+  timestamp = {2006.09.22}
+}
+
+@TECHREPORT{Suppes:2002,
+  author = {Galen J. Suppes},
+  title = {Selecting Thermodynamic Models for Process Simulation of Organic
+	VLE and LLE Systems},
+  institution = {Department of Chemical Engineering The University of Missouri-Columbia},
+  year = {2002},
+  month = {September},
+  comment = {Versão impressa.},
+  owner = {Paula},
+  pdf = {thermodynamic/Suppes:2002.pdf},
+  review = {O texto propõe que sejam utilizadas as propriedades críticas dos componentes
+	da mistura para ajudar na seleção do método de cálculo mais adequado
+	através da regra de Kay.},
+  timestamp = {2006.08.22}
+}
+
+@ARTICLE{Taylor:2000,
+  author = {R. Taylor and R. Krishna},
+  title = {Modelling reactive distillation},
+  journal = {Chemical Engineering Science},
+  year = {2000},
+  volume = {55},
+  pages = {5183--5229},
+  abstract = {The design and operation issues for reactive distillation systems
+	are considerably more complex than those involved for either conventional
+	reactors or conventional distillation columns. The introduction of
+	an in situ separation function within the reaction zone leads to
+	complex interactions between vapor-liquid equilibrium, vapor-liquid
+	mass transfer, intra-catalyst di!usion (for heterogeneously catalysed
+	processes) and chemical kinetics. Such interactions have been shown
+	to lead to the phenomenon of multiple steady-states and complex dynamics,
+	which have been verified in experimental laboratory and pilot plant
+	units. We trace the development of models that have been used for
+	design of reactive distillation columns and suggest future research
+	directions.},
+  comment = {versão impressa.},
+  keywords = {Reactive distillation; Equilibrium stage model; Non-equilibrium stage
+	model; Multiple steady-states; Maxwell-Stefan equations},
+  owner = {Paula},
+  pdf = {reactivedistillation/Taylor:2000.pdf},
+  timestamp = {2006.09.22}
+}
+
+@ARTICLE{Trotta:1995,
+  author = {Antonio Trotta and Massimiliano Barolo},
+  title = {Nonlinear Model-Based Control of a Binary Distillation Column},
+  journal = {Computers and Chemical Engineering},
+  year = {1995},
+  volume = {19},
+  pages = {S519--S524},
+  abstract = {This paper concerns the control of both product purities of a binary
+	distillation column. Refiux and boilup flow rates are chosen as manipulated
+	variables, and the corresponding control laws are derived within
+	the Globally Linearizing Control framework. Reduced order models
+	of the column are developed that allow the controller synthesis to
+	be carried out easily. Simulation results indicate that the proposed
+	control strategy outperforms a conventional PI control strategy by
+	a significant amount.},
+  comment = {Apenas versão eletrônica.},
+  keywords = {Distillation; nonlinear control; model-based control; globally linearizing
+	control},
+  owner = {Paula},
+  pdf = {distillationColumn/Trotta:1995.pdf},
+  timestamp = {2006.08.28}
+}
+
+@ARTICLE{Traenkle:1997,
+  author = {F. Tränkle and A. Gerstlauer and M. Zeitz and E.D. Giiles},
+  title = {Application of the Modeling and Simulation Environment PROMOT/DIVA
+	to the Modeling of Distillation Processes},
+  journal = {Computers chem. Engng},
+  year = {1997},
+  volume = {21},
+  pages = {S841--S846},
+  number = {Suppl.},
+  abstract = {In this contribution, the application of the computer-aided modeling
+	and simulation environment PROMOT/DIVA to the modeling of (reactive)
+	distillation processes is presented. The main focus is on the description
+	of the underlying modeling concept, together with some implications
+	of this concept for the modeling of distillation processes. One important
+	point of the modeling concept and the subsequent design of the knowledge
+	base of PROMOT is the decomposition of individual process units into
+	physically meaningful, finer grained modeling entities on different
+	hierarchical levels. The hierarchical levels considered thus far
+	are the process unit level, the phase level, and the storage level.
+	This contribution focuses mainly on the definition of the modeling
+	entities on the phase level, which are important for the modeling
+	of (reactive) distillation processes. Furthermore, the design of
+	the object-oriented knowledge base of PRoMoT that contains these
+	modeling entities is illustrated.},
+  comment = {Versão impressa.},
+  owner = {Paula},
+  pdf = {distillationColumn/Traenkle:1997.pdf},
+  review = {Ler com mais atenção.},
+  timestamp = {2006.08.22}
+}
+
+@INPROCEEDINGS{Tummescheit:1997,
+  author = {Hubertus Tummescheit and Matthias Klose and Thilo Ernst},
+  title = {Modelica and Smile - a Case Study Applying Object-Oriented Concepts
+	to Multi-Facet Modeling},
+  booktitle = {9th European Simulation Symposium ESS97},
+  year = {1997},
+  month = {October},
+  abstract = {A new language called Modelica for hierarchical physical modeling
+	is developed in an international effort. The main objectives are
+	to make it easy to exchange models and
+	
+	model libraries between tools and to use object-oriented constructs
+	to facilitate the reuse of modeling knowledge. The design approach
+	joins the concepts of non-causal modeling with ordinary differential
+	and algebraic equations with object-oriented model structuring facilities.
+	Modelica's language features are compared to the features of Smile,
+	one of the existing object-oriented modeling languages available
+	from the TU of Berlin and GMD FIRST. The Smile environment is used
+	at DLR Cologne for the modeling of solar thermal power plants, but
+	the Smile development team plans to extend the environment with theModelica
+	language (Ernst, T.,S. Jähnichen, M. Klose 1997). The example of
+	a simple stove with electrical plates is used to point out the new
+	model structuring possibilities. A tank system with a centrifugal
+	pump is used to demonstrate new possibilities of modeling using genericity
+	and inheritance.},
+  comment = {Versão impressa.},
+  owner = {Paula},
+  pdf = {softwares/Tummescheit:1997.pdf},
+  timestamp = {2006.09.15}
+}
+
+@ARTICLE{Vogelpohl:1999,
+  author = {Alfons Vogelpohl},
+  title = {A unified description of the distillation of ideal mixtures},
+  journal = {Chemical Engineering and Processing},
+  year = {1999},
+  volume = {38},
+  pages = {631--634},
+  abstract = {It is shown that the distillation of multicomponent ideal mixtures
+	may be regarded as a superposition of the distillation of ternary
+	mixtures and that the equation describing the distillation of ternary
+	mixtures may be reduced to one single fundamental equation. This
+	fundamental equation contains the lightest, the heaviest and one
+	intermediate boiling component and is equally valid for distillation
+	based on theoretical trays as well as packings. It applies to the
+	distillation at total and finite reflux and also includes the limiting
+	cases of reversible distillation or distillation with a mass transfer
+	resistance either on the gas or on the liquid
+	
+	side. This reduction of the distillation of multicomponent mixtures
+	to the distillation of a ternary mixture and to one single equation
+	greatly simplifies the understanding of the complexities of multicomponent
+	distillation.},
+  comment = {Apenas versão eletrônica.},
+  keywords = {Distillation; Multicomponent ideal mixtures},
+  owner = {Paula},
+  pdf = {distillationColumn/Vogelpohl:1999.pdf},
+  review = {Artigo que trata de uma modelagem gráfica baseada em diagramas ternários
+	e em relações de equilíbrio simples.},
+  timestamp = {2006.08.22}
+}
+
+@UNPUBLISHED{VRTech:2005,
+  author = {VRTech},
+  title = {VRTherm, a software to predict thermodynamic and physical properties
+	of complex mixtures and pure substances},
+  note = {www.vrtech.com.br},
+  year = {2005},
+  owner = {Paula},
+  timestamp = {2006.08.25}
+}
+
+@ARTICLE{Wang:2003,
+  author = {Lin Wang and Pu Li and Günter Wozny and Shuqing Wang},
+  title = {A start-up model for simulation of batch distillation starting from
+	a cold state},
+  journal = {Computers and Chemical Engineering},
+  year = {2003},
+  volume = {27},
+  pages = {1485--1497},
+  abstract = {Batch distillation columns are frequently started up with a different
+	initial reboiler charge. A proper initial state is required for simulation
+	and optimization of such processes, but it has been a non-trivial
+	task to obtain it. In this work, a model to express startup behaviors
+	of batch columns starting from an empty cold state is proposed to
+	address this issue. Each tray is described beginning with a non-equilibrium
+	phase in which only mass and energy transfer is taking place, to
+	an equilibrium phase in which the vapor-liquid equilibrium is being
+	held. The switching point between these two phases is determined
+	by the bubble-point temperature at the operating pressure. The equilibrium
+	state is reached tray by tray from bottom to top of the column, while
+	the liquid holdup on the trays is mainly filled in the opposite direction.
+	A difficulty in solving the model equations is that the number of
+	variables of the trays is not the same when their state switches
+	from a phase to another. Trivial equations are introduced to deal
+	with this problem gPROMS is used as the simulation platform. The
+	startup of a three-component batch distillation column is simulated
+	with this model and the results are compared with those from an equilibrium
+	model. The model proposed is verified through experiment on a pilot
+	batch plant with a bubble-cap tray column to separate a methanol/water
+	mixture.},
+  comment = {Apenas versão eletrônica.},
+  keywords = {Batch distillation; Startup; Cold state; Non-equilibrium; Phase transition;
+	Modeling; Simulation; gPROMS; Experimental verification},
+  owner = {Paula},
+  pdf = {distillationColumn/Wang:2003.pdf},
+  timestamp = {2006.08.22}
+}
+
+@ARTICLE{Wijn:1998,
+  author = {E.F. Wijn},
+  title = {On the lower operating range of sieve and valve trays},
+  journal = {Chemical Engineering Journal},
+  year = {1998},
+  volume = {70},
+  pages = {143--155},
+  abstract = {A model of the lower operating Iimits of distillation and absorption
+	trays is described in this paper. The model requires the simultaneous
+	solution of two equations describing ( 1) liquid flow across the
+	tray and over the outlet weir, and (2) countercurrent liquid flow
+	through the free hole area of the tray. The second equation stems
+	from models of a tray without downcomers; this equation was validated
+	by means of available test data. The model gives liquid height and
+	weep fraction as a function of gas and liquid flow rates, for a given
+	tray layout. As shown, it permits calculation of the gas flow rate
+	at weep and seal point, in a coherent way. Examples illustrate the
+	use of the method in calculating the position of the weeping range
+	of a tray and its relation to tray efficiency.},
+  comment = {Apenas versão eletrônica.},
+  keywords = {Absorption; Distillation; Dumping; Seal point; Sieve tray; Valve tray;
+	Weeping; Weep point},
+  owner = {Paula},
+  pdf = {distillationColumn/Wijn:1998.pdf},
+  review = {Não li o artigo.},
+  timestamp = {2006.08.22}
+}
+
+@ARTICLE{Wijn:1999,
+  author = {E. F. Wijn},
+  title = {Weir flow and liquid height on sieve and valve trays},
+  journal = CEJ,
+  year = {1999},
+  volume = {73},
+  pages = {191--204},
+  abstract = {Mechanisms for the flow of liquid over outlet weirs of distillation
+	and absorption trays are described in this paper. Weir flow contributes
+	to the liquid height on a tray, and this height is important for
+	the design and operation of trayed columns. Comparisons of available
+	experimental data with Francis' weir equation and with new stochastic
+	liquid flow models showed that the traditionally used Francis' equation
+	needs modifcation. The stochastic flow models link the weir flow
+	to the flow mechanisms upstream of the tray outlet. These upstream
+	mechanisms provide the input needed for a new weir crest equation.
+	The existence of a so-called 'edge-vortex' (a horizontal roll cell
+	at the boundary of the gassed and the ungassed region) is shown to
+	play an important role, when a calming zone is present upstream of
+	the outlet weir.},
+  comment = {Versão impressa.},
+  keywords = {Calming zone; Distillation; Liquid height; Regime; Sieve tray; Spray;
+	Valve tray; Weir},
+  owner = {Paula},
+  pdf = {distillationColumn/Wijn:1999.pdf},
+  review = {Não li o artigo.}
+}
+
+@ARTICLE{Wijn:1996,
+  author = {E. F. Wijn},
+  title = {The effect of downcomer layout pattern on tray efficiency},
+  journal = {The Chemical Engineering Journal},
+  year = {1996},
+  volume = {63},
+  pages = {167--180},
+  abstract = {A multi-branch/multi-cell model has been developed and used to evaluate
+	the tray efficiency for examples of distillation trays with different
+	layouts of the downcomer areas. The multi-branch/multi-cell model
+	predicts that the trays with different downcomer area distribution
+	patterns do have a different tray efficiency. Hence, it can help
+	in the identification of the most efficient downcomer layout pattern
+	and in the quantification of the expected efficiencies differences.},
+  comment = {Apenas versão eletrônica.},
+  keywords = {Downcomer layout pattern; Tray efficiency; Distillation columns},
+  owner = {Paula},
+  pdf = {distillationColumn/Wijn:1996.pdf},
+  review = {Não li o artigo.},
+  timestamp = {2006.08.22}
+}
+
+@ARTICLE{Wozny:2004,
+  author = {Günter Wozny and Pu Li},
+  title = {Optimisation and experimental verification of start-up policies for
+	distillation columns},
+  journal = {Computers and Chemical Engineering},
+  year = {2004},
+  volume = {28},
+  pages = {253--265},
+  abstract = {Startup of distillation columns is one of the most difficult operations
+	in the chemical industry. Since the startup often lasts a long period
+	of time, leads to off-spec products, and costs much energy, optimisation
+	of startup operating policies for distillation columns is of great
+	interest. In the last few years, we have carried out both theoretical
+	studies and experimental verifications with the purpose of minimising
+	the startup time of distillation columns. Model-based optimisation
+	as well as real plant implementation is the core of this work. The
+	model is at first validated with experimental data and then used
+	in the optimisation problem formulation. A rigorous column model
+	and a sequential dynamic optimisation approach have been applied
+	to several pilot distillation columns. Experimental results indicate
+	that a significant reduction of the startup time can be achieved
+	by implementing the developed optimal policies. These results demonstrate
+	the applicability of the modelling and optimisation methodology.},
+  comment = {Versão impressa.},
+  keywords = {Startup; Distillation column; Modelling; Optimisation; Experimental
+	verification},
+  owner = {Paula},
+  pdf = {reactivedistillation/Wozny:2004.pdf},
+  timestamp = {2006.09.14}
+}
+
+@ARTICLE{Yang:1997,
+  author = {Dae Ryook Yang and Kwang Soon Lee},
+  title = {Monitoring of a Distillation Column Using Modified Extended Kalman
+	Filter and a Reduced Order Model},
+  journal = {Computers and Chemical Engineering},
+  year = {1997},
+  volume = {21},
+  pages = {S565--S570},
+  number = {Suppl.},
+  abstract = {An efficient model reduction technique for the distillation columns
+	is applied to account for the detail dynamics. This technique utilizes
+	the orthogonal collocation and cubic spline method. Then the extended
+	Kalman filter is applied to identify the model parameters and the
+	feed composition from the measurements of the column. From the simulation,
+	the model reduction technique can account for the detail dynamics
+	of the rigorous distillation model and not only the model parameters,
+	but also the feed composition can be identified by the recursive
+	prediction error method.},
+  comment = {Apenas versão eletrônica.},
+  owner = {Paula},
+  pdf = {distillationColumn/Yang:1997.pdf},
+  timestamp = {2006.08.28}
+}
+
+@ARTICLE{Yasuoka:1982,
+  author = {H. Yasuoka and E. Nakanishi},
+  title = {A convenient algorithm for the online optimum start-up operation
+	of binary distillation.},
+  journal = {Memoirs of the Faculty of the Engineering, Kobe University},
+  year = {1982},
+  volume = {29},
+  pages = {161--169},
+  comment = {Apenas utilizado como apud.},
+  owner = {Paula},
+  timestamp = {2006.08.25}
+}
+
+@ARTICLE{Zhang:2004,
+  author = {Libin Zhang and Andreas A. Linninger},
+  title = {Temperature Collocation Algorithm for Fast and Robust Distillation
+	Design},
+  journal = {Ind. Eng. Chem. Res},
+  year = {2004},
+  volume = {43},
+  pages = {3163--3182},
+  abstract = {In this paper, we describe a new minimum bubble-point distance (MIDI)
+	algorithm for assessing the feasibility of a desired distillation
+	specification. The algorithm computes the rectifying and stripping
+	temperature profiles by temperature collocation on finite elements
+	with orthogonal polynomials. We discovered the beneficial use of
+	a dimensionless equilibrium tray temperature as an independent variable.
+	This novel choice is bounded between 0 and 1, improves the numerical
+	quality of the design problem formulation, and is well-behaved even
+	in the vicinity of pinch regions. It also employs the fixed points
+	of column sections as collocation points. Adaptive-element boundary
+	placement at saddle temperatures can effectively overcome problems
+	with numerical instability near pinch regions. Extensions of our
+	MIDI algorithm to the calculation of the minimum and maximum refluxes
+	are also introduced. We show the application of this algorithm in
+	the separation of quaternary mixtures and provide an outlook of the
+	methodology for optimal column sequencing. Cases studies demonstrate
+	the algorithm robustness and reliability.},
+  comment = {Apenas versão eletrônica.},
+  owner = {Paula},
+  pdf = {distillationColumn/Zhang:2004.pdf},
+  timestamp = {2006.08.28}
+}
+
+@comment{jabref-meta: groupsversion:3;}
+
+@comment{jabref-meta: groupstree:
+0 AllEntriesGroup:;
+1 ExplicitGroup:Real Distillation\;0\;Baur:2000\;Baur:2000a\;Biardi:19
+89\;Eckert:2001\;Higler:1999\;Higler:1999_dissertation\;Koeijer:2004\;
+Kooijman:1995\;Kooijman:1995a\;Lee:1998\;Mehlhorn:1996\;Muller:2000\;P
+eng:2003\;Rao:1995\;Rao:2001\;;
+1 ExplicitGroup:Hidraulics\;0\;Betlem:1998\;Chang:1998\;Hongyan:2002\;
+Lockett:1986\;Wijn:1996\;Wijn:1998\;Wijn:1999\;;
+1 ExplicitGroup:Miscellaneous\;0\;Brooks:1993\;Gross:1998\;Grossmann:2
+005\;Jobson:1997\;Kaeser:2006\;Kiva:1997\;Liu:2000\;Luyben:2006\;Morta
+heb:2002\;Soave:2002\;Suppes:2002\;Traenkle:1997\;Vogelpohl:1999\;;
+1 ExplicitGroup:Numerical Aspects\;0\;Cameron:1986\;Fletcher:2000\;;
+1 ExplicitGroup:Azeotropic\;0\;Castillo:1998\;;
+1 ExplicitGroup:Startup-shutdown\;0\;Chang:1998\;Elgue:2004\;Reepmeyer
+:2003\;Reepmeyer:2004\;Ruiz:1988\;Wang:2003\;Wozny:2004\;Yasuoka:1982\
+;;
+1 ExplicitGroup:LLE\;0\;Eckert:1995\;Eckert:2001\;Gumus:1997\;;
+1 ExplicitGroup:Batch Distillation\;0\;Elgue:2004\;Kim:1999\;Klingberg
+:2000\;Mehlhorn:1996\;Wang:2003\;;
+1 ExplicitGroup:Equilibrium Distillation\;0\;Elgue:2004\;Gani:1986\;Ga
+ni:1989\;Kim:1999\;Klingberg:2000\;Olsen:1997\;Osorio:2004\;Roffel:200
+0\;Wang:2003\;;
+1 ExplicitGroup:SS simulation\;0\;Carta:1995\;Dave:2003\;Eiden:1997\;F
+letcher:2000\;Gani:1989\;Kooijman:1995a\;McKay:1997\;Ramchandran:1995\
+;Stewart:1985\;;
+1 ExplicitGroup:Irreversible Thermodynamics\;0\;Koeijer:2004\;Ray:1996
+\;Resjorde:2005\;;
+1 ExplicitGroup:low-order model\;0\;Benallou:1986\;Betlem:2000\;Cho:19
+84\;Diwekar:1987\;Huss:1996\;Kienle:2000\;Musch:1993\;Ramaswamy:2002\;
+Stewart:1985\;Trotta:1995\;Zhang:2004\;;
+1 ExplicitGroup:Reactive Distillation\;0\;Alejski:1996\;Alfradique:200
+5\;Baur:2000\;Baur:2000_dissertation\;Baur:2000a\;Gumus:1997\;Higler:1
+999\;Higler:1999_dissertation\;Lee:1998\;Peng:2003\;Reepmeyer:2003\;Re
+epmeyer:2004\;Sundmacher:2003\;Yasuoka:1982\;;
+}
+

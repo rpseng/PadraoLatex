@@ -1,0 +1,154 @@
+#*-------------------------------------------------------------------
+* Model of a tray
+*-------------------------------------------------------------------- 
+* 	- Streams
+*		* a liquid outlet stream
+*		* a vapour outlet stream
+*		* a feed stream
+*
+*	- Assumptions
+*		* both phases (liquid and vapour) exists all the time
+*		* thermodymanic equilibrium (Murphree plate efficiency=1)
+*		* no entrainment of liquid or vapour phase
+*		* no weeping
+*		* the dymanics in the downcomer are neglected
+* 
+*	- Tray hydraulics: Roffel B.,Betlem B.H.L.,Ruijter J.A.F. (2000)
+* 						Computers and Chemical Engineering and
+*					   The gPROMS Model Library
+*
+*	Specify:
+*		* the Feed stream
+*		* the Liquid inlet stream
+*		* the Vapour inlet stream excluding its flow
+*		* the Vapour outlet flow (Outlet.F)
+*
+*	Initial:
+*		* the plate temperature (OutletL.T)
+*		* the liquid height (hl)
+*		* (NoComps - 1) OutletL (or OutletV) compositions
+*
+*----------------------------------------------------------------------
+* Author: Paula B. Staudt
+* $Id$
+*--------------------------------------------------------------------*#
+
+using "streams";
+
+Model trayBasic
+
+	PARAMETERS
+outer PP as Plugin(Type="PP");
+outer NComp as Integer;
+	V as volume(Brief="Total Volume of the tray");
+	Q as power (Brief="Rate of heat supply"); 
+	Ap as area (Brief="Plate area = Atray - Adowncomer");
+	
+	VARIABLES
+in	Inlet as stream;
+in	InletL as stream;
+in	InletV as stream;
+out	OutletL as liquid_stream;
+out	OutletV as vapour_stream;
+
+	M(NComp) as mol (Brief="Molar Holdup in the tray");
+	ML as mol (Brief="Molar liquid holdup");
+	MV as mol (Brief="Molar vapour holdup");
+	E as energy (Brief="Total Energy Holdup on tray");
+	vL as volume_mol (Brief="Liquid Molar Volume");
+	vV as volume_mol (Brief="Vapour Molar volume");
+	Level as length (Brief="Height of clear liquid on plate");
+	yideal(NComp) as fraction;
+	Emv as Real (Brief = "Murphree efficiency");
+	
+	EQUATIONS
+	"Component Molar Balance"
+	diff(M)=Inlet.F*Inlet.z + InletL.F*InletL.z + InletV.F*InletV.z
+		- OutletL.F*OutletL.z - OutletV.F*OutletV.z;
+	
+	"Energy Balance"
+	diff(E) = ( Inlet.F*Inlet.h + InletL.F*InletL.h + InletV.F*InletV.h
+		- OutletL.F*OutletL.h - OutletV.F*OutletV.h + Q );
+	
+	"Molar Holdup"
+	M = ML*OutletL.z + MV*OutletV.z;
+	
+	"Energy Holdup"
+	E = ML*OutletL.h + MV*OutletV.h - OutletL.P*V;
+	
+	"Mol fraction normalisation"
+	sum(OutletL.z)= 1.0;
+	sum(OutletL.z)= sum(yideal);
+	
+	"Liquid Volume"
+	vL = PP.LiquidVolume(OutletL.T, OutletL.P, OutletL.z);
+	"Vapour Volume"
+	vV = PP.VapourVolume(OutletV.T, OutletV.P, OutletV.z);
+	
+	"Chemical Equilibrium"
+		PP.LiquidFugacityCoefficient(OutletL.T, OutletL.P, OutletL.z)*OutletL.z = 
+		PP.VapourFugacityCoefficient(OutletV.T, OutletV.P, yideal)*yideal;
+
+	"Murphree Efficiency"
+	(OutletV.z - InletV.z) = Emv * (yideal - InletV.z) ;
+	
+	"Thermal Equilibrium"
+	OutletV.T = OutletL.T;
+	
+	"Mechanical Equilibrium"
+	OutletV.P = OutletL.P;
+	
+	"Geometry Constraint"
+	V = ML* vL + MV*vV;
+	
+	"Level of clear liquid over the weir"
+	Level = ML*vL/Ap;
+end
+
+Model tray as trayBasic
+
+	PARAMETERS
+	Ah as area (Brief="Total holes area");
+	lw as length (Brief="Weir length");
+	g as acceleration (Default=9.81);
+	hw as length (Brief="Weir height");
+	beta as fraction (Brief="Aeration fraction");
+	
+	VapourFlow as Switcher(Valid = ["on", "off"], Default = "on");
+	LiquidFlow as Switcher(Valid = ["on", "off"], Default = "on");
+
+	VARIABLES
+	rhoL as dens_mass;
+	rhoV as dens_mass;
+	alfa as fraction (Brief="Dry pressure drop coefficient");	
+
+	EQUATIONS
+	"Liquid Density"
+	rhoL = PP.LiquidDensity(OutletL.T, OutletL.P, OutletL.z);
+	"Vapour Density"
+	rhoV = PP.VapourDensity(InletV.T, InletV.P, InletV.z);
+
+	switch LiquidFlow
+		case "on":
+		"Liquid Flow"
+		OutletL.F*vL = 1.84*'m^0.5/s'*lw*((Level-(beta*hw))/(beta))^1.5;
+		when Level < (beta * hw) switchto "off";
+		
+		case "off":
+		"Low level"
+		OutletL.F = 0 * 'mol/h';
+		when Level > (beta * hw) + 1e-6*'m' switchto "on";
+	end
+
+	switch VapourFlow
+		case "on":
+		InletV.F*vV = sqrt((InletV.P - OutletV.P)/(rhoV*alfa))*Ah;
+		when InletV.F < 1e-6 * 'kmol/h' switchto "off";
+		
+		case "off":
+		InletV.F = 0 * 'mol/s';
+		when InletV.P > OutletV.P + Level*g*rhoL + 1e-3 * 'atm' switchto "on";
+	end
+	
+end
+

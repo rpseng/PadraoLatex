@@ -1,0 +1,120 @@
+%%+++++++++++++++++++++++++++++++++++++++ Preâmbulo ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+%%   Preâmbulo: pacotes, configurações e comandos específicos do usuário
+
+%+++++++++++++++++++++++++++++++++++++++ Pacotes de Macros ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+\usepackage{color} 		% Pacote para cores
+\usepackage{graphicx} 	% Pacote para graficos
+\usepackage{url}		% Pacote para inserir URL
+\usepackage{extarrows} 	% Pacote para inserir formulas quimicas
+\usepackage{framed} 	% Pacote para inserir frames em textos e figuras
+\usepackage[version=3]{mhchem} % Formulas químicas automaticas, comando \ce{}
+
+%+++++++++++++++++++++++++++++++++++++++ Definições do listings ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+% Sintaxe do EMSO
+\lstdefinelanguage{EMSO}{
+  morekeywords={
+		Model,FlowSheet,Estimation,Optimization,
+		PARAMETERS,VARIABLES,EQUATIONS,DEVICES,SET,SPECIFY,GUESS,CONNECTIONS,
+		INITIAL,OPTIONS,ATTRIBUTES,ESTIMATE,EXPERIMENTS,MINIMIZE,MAXIMIZE,FREE,
+		Brief,Unit,DisplayUnit,Default,Upper,Lower,Type,final,Valid,Symbol,PosX,PosY,
+		Components,LiquidModel,VapourModel,
+		Pallete,Icon,Info,Protected,Hidden,
+		TimeStep,TimeEnd,TimeUnit,Dynamic,SparseAlgebra,NLPSolver,NLPSolveNLA,NLASolver,DAESolver,
+		File,RelativeAccuracy,AbsoluteAccuracy,EventAccuracy,MaxIterations,GuessFile,InitialFile,
+		Statistics,Fit,Parameter,Prediction,Significance,BiLateral,RunTests,NumJac,
+		using,for,as,to,if,end,else,switch,switchto,when,case,
+		in,out,outer, 
+		Integer,Real,Boolean,Text,Plugin,Switcher,CalcObject,
+		equal,and,or,true,false,
+        time,diff,sum,sumt,prod,prodt,transp,min,max,abs,
+		sign,round,sinh,cosh,tanh,coth,atan,
+		exp,log,ln,sqrt,sin,cos,tan,asin,acos},
+  sensitive = true,
+  morecomment=[l]{\#},
+  morecomment=[s]{\#*}{*\#},
+  morestring=[b]",
+  morestring=[b]'
+}
+\lstset{
+  basicstyle=\fontfamily{pcr}\fontseries{m}\selectfont\footnotesize,
+  commentstyle=\color[rgb]{0,0.5,0}\itshape,
+  keywordstyle=\color{blue}\bfseries,
+  stringstyle=\color[rgb]{0.5,0,0.5}\itshape,
+  showstringspaces=false,
+  numbers=left,
+  numberstyle=\fontfamily{pcr}\fontseries{m}\selectfont\tiny,
+  numberblanklines=false,
+  showlines=false,
+  belowskip=\bigskipamount{},
+  breaklines=true,
+  %stepnumber=2,
+  tabsize=6,
+  %extendedchars=true,
+  %float=h,
+  frame=tb
+}
+%+++++++++++++++++++++++++++++++++++++++ Definições em Comandos ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+\newcommand{\code}[1]{\texttt{#1}}
+\renewcommand{\lstlistingname}{Código}
+\renewcommand{\lstlistlistingname}{Lista de Códigos}
+\newcommand{\email}{\begingroup \urlstyle{rm}\Url}
+\newcommand{\lattes}[2]{\htmladdnormallink{#1}{http://lattes.cnpq.br/#2}} % Curriculo Lattes
+%EXEMPLO:
+%\lattes{Prof. Dr. José Goldemberg}{1388529283382853}
+%onde o link fica http://lattes.cnpq.br/1388529283382853
+%estas URLs curtas estão loga após o resumo dos currículos Lattes
+
+%\newcommand{\emso}{{\scshape\fontfamily{cmss}emso}}
+\newcommand{\vrtherm}{VRTherm}
+\newcommand{\emso}{EMSO}
+\newcommand{\emsoname}{\textbf{E}nvironment for \textbf{M}odeling,
+	\textbf{S}imulation and \textbf{O}ptimization}
+\newcommand{\eml}{EML}
+\newcommand{\emlname}{\emso{} \textbf{M}odel \textbf{L}ibrary}
+\newcommand{\flowsheet}{\code{FlowSheet}}
+\newcommand{\device}{\code{Device}}
+\newcommand{\model}{\code{Model}}
+\newcommand{\script}{\code{Script}}
+\newcommand{\mso}{\code{.mso}}
+% The types
+\newcommand{\real}{\code{Real}}
+\newcommand{\integer}{\code{Integer}}
+%\newcommand{\boolean}{\code{Boolean}}
+\newcommand{\calcObject}{\code{CalcObject}}
+\newcommand{\brief}{\code{Brief}}
+\newcommand{\lowerb}{\code{Lower}}
+\newcommand{\upperb}{\code{Upper}}
+
+\newcounter{numero}
+% Renew the lists to remove the space before it
+\renewenvironment{itemize}{\vspace{-\parskip}\vspace{\lineskip}\begin{list}{$\bullet$}
+{\usecounter{numero} \setlength{\rightmargin}{\leftmargin}}}{\end{list}}
+\renewenvironment{enumerate}{\vspace{-\parskip}\vspace{\lineskip}\begin{list}{\arabic{numero}.}
+{\usecounter{numero} \setlength{\rightmargin}{\leftmargin}}}{\end{list}}
+
+%List in roman i), ii), etc
+\newenvironment{rlist}{\begin{list}{\roman{numero})}
+{\usecounter{numero} \setlength{\rightmargin}{\leftmargin}}}{\end{list}}
+
+%List in ROMAN I., II., etc
+\newenvironment{Rlist}{\begin{list}{\Roman{numero}.}
+{\usecounter{numero} \setlength{\rightmargin}{\leftmargin}}}{\end{list}}
+
+%List in alph a), b), etc
+\newenvironment{alist}{\begin{list}{\alph{numero})}
+{\usecounter{numero} \setlength{\rightmargin}{\leftmargin}}}{\end{list}}
+
+%List in Alph A), B), etc
+\newenvironment{Alist}{\begin{list}{\Alph{numero})}
+{\usecounter{numero} \setlength{\rightmargin}{\leftmargin}}}{\end{list}}
+
+%List in arabic 1), 2), etc
+\newenvironment{nlist}{\begin{list}{\arabic{numero})}
+{\usecounter{numero} \setlength{\rightmargin}{\leftmargin}}}{\end{list}}
+
+%\nomenclature[G]{$\alpha$}{Constant}
+%\nomenclature[A]{$x$}{Variable}
+%\nomenclature{$l$}{Length\nomunit{$m$}}
+
+%+++++++++++++++++++++++++++++++++++++++ Desta linha para baixo não modifique ++++++++++++++++++++++++++++++++++++++++++++++++++
+

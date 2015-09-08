@@ -1,0 +1,95 @@
+#*-------------------------------------------------------------------
+* Model of a splitter
+*-------------------------------------------------------------------- 
+*
+*	Streams:
+*		* a inlet stream
+*		* "Noutlet" outlet streams
+*
+*	Assumptions:
+*		* thermodynamics equilibrium
+*		* adiabatic
+*			
+*	Specify:
+*		* the inlet stream
+*		* (Noutlet - 1) fraction of split of the outlet streams:
+*				frac(i) = (Mole Flow of the outlet stream "i" / 
+*									Mole Flow of the inlet stream)
+*				where i = 1, 2,...,Noutlet
+*
+*----------------------------------------------------------------------
+* Author: Maurício Carvalho Maciel
+* $Id: splitter.mso 1 2006-06-20 17:33:53Z rafael $
+*--------------------------------------------------------------------*#
+
+
+using "streams";
+
+Model splitter_n
+	PARAMETERS
+	NOutlet as Integer (Brief = "Number of Outlet Streams", Lower = 1);
+	
+	VARIABLES
+in	Inlet   as stream;
+out Outlet(NOutlet)  as stream;
+	frac(NOutlet) as fraction (Brief = "Distribution of Outlets", Default=0.5);
+
+	EQUATIONS
+	
+	sum(frac) = 1;
+	
+	for i in [1:NOutlet]
+		
+		"Flow"
+		Outlet(i).F = Inlet.F*frac(i);
+		
+		"Composition"
+		Outlet(i).z = Inlet.z;
+	
+		"Pressure"
+		Outlet(i).P = Inlet.P;
+	
+		"Enthalpy"
+		Outlet(i).h = Inlet.h;
+	
+		"Temperature"	
+		Outlet(i).T = Inlet.T;
+	 
+		"Vapourisation Fraction"
+		Outlet(i).v = Inlet.v;
+	end
+
+end
+
+
+#*----------------------------------------------------------------------
+* Splitter with 2 outlet streams
+*---------------------------------------------------------------------*# 
+Model splitter
+	
+	VARIABLES
+in  Inlet   as stream;
+out Outlet1 as stream;
+out Outlet2 as stream;
+	frac as fraction (Brief = "Fraction to Outlet 1");
+
+	EQUATIONS
+	"Flow"
+	Outlet1.F = Inlet.F * frac;
+	Outlet1.F + Outlet2.F = Inlet.F;
+	"Composition"
+	Outlet1.z = Inlet.z;
+	Outlet2.z = Inlet.z;
+	"Pressure"
+	Outlet1.P = Inlet.P;
+	Outlet2.P = Inlet.P;
+	"Enthalpy"
+	Outlet1.h = Inlet.h;
+	Outlet2.h = Inlet.h;
+	"Temperature"
+	Outlet1.T = Inlet.T;
+	Outlet2.T = Inlet.T;
+	"Vapourisation Fraction"
+	Outlet1.v = Inlet.v;
+	Outlet2.v = Inlet.v;
+end

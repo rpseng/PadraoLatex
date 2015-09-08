@@ -1,0 +1,153 @@
+#*-------------------------------------------------------------------
+* EMSO Model Library (EML) Copyright (C) 2004 - 2007 ALSOC.
+*
+* This LIBRARY is free software; you can distribute it and/or modify
+* it under the therms of the ALSOC FREE LICENSE as available at
+* http://www.enq.ufrgs.br/alsoc.
+*
+* EMSO Copyright (C) 2004 - 2007 ALSOC, original code
+* from http://www.rps.eng.br Copyright (C) 2002-2004.
+* All rights reserved.
+*
+* EMSO is distributed under the therms of the ALSOC LICENSE as
+* available at http://www.enq.ufrgs.br/alsoc.
+*
+*-------------------------------------------------------------------
+* Model of a dynamic flash
+*-------------------------------------------------------------------- 
+* 	- Streams
+*		* a liquid outlet stream
+*		* a vapour outlet stream
+*		* a feed stream
+*
+*	- Assumptions
+*		* both phases are perfectly mixed
+*
+*	- Specify:
+*		* the feed stream;
+*		* the outlet flows: OutletV.F and OutletL.F
+*
+*	- Initial:
+*		* the flash initial temperature (OutletL.T)
+*		* the flash initial liquid level (Ll)
+*		* (NoComps - 1) OutletL (OR OutletV) compositions
+*----------------------------------------------------------------------
+* Author: Paula B. Staudt
+* $Id: flash.mso 235 2007-04-12 01:16:05Z arge $
+*--------------------------------------------------------------------*#
+
+using "streams";
+
+Model flash
+	PARAMETERS
+outer PP as Plugin (Brief = "External Physical Properties", Type="PP");
+outer NComp as Integer (Brief = "Number of chemical components", Lower = 1); 
+	V as volume (Brief="Total Volume of the flash");
+	Mw(NComp) as molweight;
+	orientation as Switcher (Valid=["vertical","horizontal"],Default="vertical");
+	diameter as length (Brief="Vessel diameter");
+
+	SET
+	Mw=PP.MolecularWeight();
+
+	VARIABLES
+	in	Inlet as stream(Brief="Feed Stream");
+	out	OutletL as liquid_stream(Brief="Liquid outlet stream");
+	out	OutletV as vapour_stream(Brief="Vapour outlet stream");
+	in	Q as heat_rate (Brief="Rate of heat supply");
+
+	M(NComp) as mol (Brief="Molar Holdup in the tray");
+	ML as mol (Brief="Molar liquid holdup");
+	MV as mol (Brief="Molar vapour holdup");
+	E as energy (Brief="Total Energy Holdup on tray");
+	vL as volume_mol (Brief="Liquid Molar Volume");
+	vV as volume_mol (Brief="Vapour Molar volume");
+	Level as length (Brief="liquid height");
+	Across as area (Brief="Flash Cross section area");
+
+	EQUATIONS
+	"Component Molar Balance"
+	diff(M)=Inlet.F*Inlet.z - OutletL.F*OutletL.z - OutletV.F*OutletV.z;
+	
+	"Energy Balance"
+	diff(E) = Inlet.F*Inlet.h - OutletL.F*OutletL.h - OutletV.F*OutletV.h + Q;
+	
+	"Molar Holdup"
+	M = ML*OutletL.z + MV*OutletV.z; 
+	
+	"Energy Holdup"
+	E = ML*OutletL.h + MV*OutletV.h - OutletL.P*V;
+	
+	"Mol fraction normalisation"
+	sum(OutletL.z)=1.0;
+	"Mol fraction normalisation"
+	sum(OutletL.z)=sum(OutletV.z);
+	
+	"Liquid Volume"
+	vL = PP.LiquidVolume(OutletL.T, OutletL.P, OutletL.z);
+	"Vapour Volume"
+	vV = PP.VapourVolume(OutletV.T, OutletV.P, OutletV.z);
+	
+	"Chemical Equilibrium"
+	PP.LiquidFugacityCoefficient(OutletL.T, OutletL.P, OutletL.z)*OutletL.z = 
+		PP.VapourFugacityCoefficient(OutletV.T, OutletV.P, OutletV.z)*OutletV.z;
+	
+	"Thermal Equilibrium"
+	OutletV.T = OutletL.T;
+	
+	"Mechanical Equilibrium"
+	OutletV.P = OutletL.P;
+	
+	"Geometry Constraint"
+	V = ML * vL + MV * vV;
+
+	switch orientation
+	case "vertical":
+	"Cross Section Area"
+		Across = 0.5 * asin(1) * diameter^2;
+	
+	"Liquid Level"
+		ML * vL = Across * Level;
+
+	case "horizontal":
+	"Cylindrical Side Area"
+		Across = 0.25*diameter^2 * (asin(1) - asin((diameter - 2*Level)/diameter)) + 
+				(Level - 0.5*diameter)*sqrt(Level*(diameter - Level));
+
+	"Liquid Level"
+		0.5 * asin(1) * diameter^2 * ML* vL = Across * V;
+	end
+end
+
+#*----------------------------------------------------------------------
+* Model of a  Steady State flash
+*---------------------------------------------------------------------*# 
+Model flash_steady
+	PARAMETERS
+outer PP as Plugin(Brief = "External Physical Properties", Type="PP");
+	
+	VARIABLES
+	in	Inlet as stream(Brief="Feed Stream");
+	out	OutletL as liquid_stream(Brief="Liquid outlet stream");
+	out	OutletV as vapour_stream(Brief="Vapour outlet stream");
+	in	Q as heat_rate (Brief="Rate of heat supply"); 
+	vfrac as fraction;
+
+	EQUATIONS
+	"The flash calculation"
+	[vfrac, OutletL.z, OutletV.z] = PP.Flash(OutletV.T, OutletV.P, Inlet.z);
+	
+	"Global Molar Balance"
+	Inlet.F = OutletV.F + OutletL.F;
+	"Vaporisation Fraction"
+	OutletV.F = Inlet.F * vfrac;
+	
+	"Energy Balance"
+	Inlet.F*Inlet.h  + Q = OutletL.F*OutletL.h + OutletV.F*OutletV.h;
+	
+	"Thermal Equilibrium"
+	OutletV.T = OutletL.T;
+	
+	"Mechanical Equilibrium"
+	OutletV.P = OutletL.P;
+end

@@ -1,0 +1,104 @@
+%
+%
+%
+\chapter{Sobre o Padrão em \LaTeX{}}
+
+\emph{Este documento foi constuído utilizando o \LaTeX{}.
+Os arquivos fonte deste documento formam o próprio padrão de dissertação
+do PPGEQ.}
+
+\section{Obtendo o padrão em \LaTeX{}}
+
+Os arquivos fonte deste documento estão livremente disponíveis e podem ser obtidos no seguinte endereço:
+\href{http://www.enq.ufrgs.br/svn/bolsistas/rafael/PadraoLatex}{www.enq.ufrgs.br/svn/bolsistas/rafael/PadraoLatex}.
+
+O usuário deverá seguir os comentários presentes nos arquivos fonte para montar
+sua própria tese ou dissertação.
+Este padrão \LaTeX{} automatiza da capa às referências.
+Não é preciso fazer nada para que todas as citações e referências estejam corretas.
+Assim como as listas de figuras, tabelas, símbolos e etc.
+
+Alguns comentários sobre pacotes úteis são apresentados nas seções que seguem.
+
+\section{Lista de símbolos}
+
+O padrão \LaTeX{} do PPGEQ automatiza a criação da lista de símbolos.
+Cada vez que um novo símbolo precisa ser definido, basta adicionar a seguinte linha:
+\begin{lstlisting}[numbers=none]
+\nomenclature{$f_i$}{Fugacidade do componente $i$}
+\end{lstlisting}
+
+Se o símbolo tiver unidades de medida, esta pode ser informada
+com o comando \code{nomunit} para que apareça também na listagem:
+\begin{lstlisting}[numbers=none]
+\nomenclature{$J^V_{i}$}{Fluxo molar de $i$ no vapor\nomunit{mol/(m^2\ s)}}
+\end{lstlisting}
+
+
+Para que o símbolo seja categorizado como uma letra grega, adicione um \code{G} na definição,
+conforme abaixo:
+\begin{lstlisting}[numbers=none]
+\nomenclature[G]{$\gamma_i$}{Coeficiente de atividade do componente $i$}
+\end{lstlisting}
+
+Para a definição de siglas, adicione um \code{Z} na definição,
+conforme abaixo:
+\begin{lstlisting}[numbers=none]
+\nomenclature[Z]{EMSO}{Environment for Modeling, Simulation and Optimization}
+\end{lstlisting}
+
+De forma similar ao exemplificado acima, sobrescritos e subscritos podem
+também ser definidos separadamente com o auxílio das letras \code{R} e \code{S}, respectivamente.
+
+Todos os símbolos e siglas definidos desta forma serão automaticamente adicionados
+na listagem de símbolos.
+
+\section{Usando o pacote siunitx}
+
+O pacote \code{siunitx} está carregado no padrão \LaTeX{} do PPGEQ.
+Com ele se torna simplificada a exibição de números decimais.
+Por exemplo, se utilizamos o comando \verb|\num{3.45e-4}| teremos como resultado \num{3.45e-4}.
+
+Ainda com este pacote, a impressão de unidades de medida também é facilitada.
+Por exemplo, \verb|\SI{250}{\celsius}| resulta em \SI{250}{\celsius} ou então
+\verb|\si{m^2/s}| vai ser apresentado como \si{m^2/s}.
+
+\section{Usando o pacote mhchem}
+
+O pacote \code{mhchem} está carregado no padrão \LaTeX{} do PPGEQ.
+Com o axílio deste pacote é fácil escrever equações para reações químicas.
+Por exemplo, com o seguinte comando \verb|\ce{H2O + H2O -> H3O+ + OH-}| teremos:
+\begin{equation}
+\ce{H2O + H2O -> H3O+ + OH-}
+\end{equation}
+
+Uma fórmula no meio do texto pode ser inserida simplesmente
+com \verb|\ce{H2O}|, que será formatada da seguinte forma: \ce{H2O}.
+
+\subsection{Equações mais elaboradas}
+
+Equações bem mais elaboradas podem ser escritas.
+Uma lista de exemplos segue abaixo, consulte os fontes deste documento ou
+a documentação do \code{mhchem} para mais detalhes.
+
+\begin{equation}
+\ce{2LiOH_{(s)} + CO_{2(g)} -> Li_{2}CO_{3(s)} + H_{2}O_{(g)} }
+\end{equation}
+
+\begin{equation}
+\ce{CO2 + C <=> 2CO}
+\end{equation}
+
+\begin{equation}
+\ce{H+ + OH- <=>> H2O}
+\end{equation}
+
+\begin{equation}
+\ce{CO2 + C ->[\alpha][\beta] 2CO}
+\end{equation}
+
+
+\begin{equation}
+\ce{SO4^2- + Ba^2+ -> BaSO4 v}
+\end{equation}
+

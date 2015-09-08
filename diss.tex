@@ -1,0 +1,139 @@
+%%
+%% Arquivo principal da tese ou dissertação.
+%%
+%% Siga as instruções que seguem comentadas neste arquivo.
+%%
+%% ESTA VERSÃO REQUER UM EDITOR UTF-8.
+%%
+%% Exemplos de utilização dos comandos podem ser encontrados
+%% nos capítulos que acompanham este pacote.
+%%
+%%
+\documentclass[mestrado,codelist]{ppgeq}
+%\documentclass[doutorado]{ppgeq}
+%\documentclass[qualify]{ppgeq}
+
+% algumas customizações: o preamble.tex pode ser editado pelo usuário
+\input{preamble}
+
+% modifique os argumentos dos comandos abaixo para que as primeiras páginas
+% sejam construídas automaticamente
+\title{Padrão de Dissertação/Tese/Qualify do PPGEQ--UFRGS}
+\author{Fulano de Tal}
+\authorCitation{Tal, Fulano de}
+\area{Pesquisa e Desenvolvimento de Processos}
+\tyear{2014}
+% verificar o número de páginas do PDF final
+\totalPages{146}
+\advisor{Rafael de Pelegrini Soares}
+\advisorCitation{Soares, Rafael de P.}
+\coadvisor{Beltrano de Tal} % opcional
+\coadvisorCitation{Tal, Beltrano de}
+% \coadvisorCitation{Tal, Beltrano de}
+\bancai{Prof. Banca 1, D.Sc.}
+\bancaii{Prof. Banca 2, Ph.D.}
+\bancaiii{Prof. Banca 3, D.Sc}
+% \bancaiiii{Prof. Banca 4, D.Sc} % opcional
+\pensamento{pensamento.\\ \vspace{0.5cm} \begin{flushright}
+Autor \end{flushright}}
+\agradecimento{Agradecimentos....
+}
+
+\resumo{A pesquisa acerca da modelagem de colunas de destilação não é mais uma
+novidade nos dias de hoje. Os primeiros trabalhos, com metodologias propostas para a 
+solução de sistemas de separação modelados prato a prato, surgiram na década de 30. Porém,
+só a partir da década de 50, com o advento do computador digital, foram realizados 
+investimentos sólidos no desenvolvimento de novos algoritmos e simuladores. Apesar 
+deste investimento, apenas modelos simplificados eram utilizados devido 
+à baixa capacidade de processamento. A partir da década de 70, os primeiros simuladores 
+comerciais começaram a ser introduzidos na indústria e o desenvolvimento de modelos rigorosos 
+não parou mais.
+Dentro deste contexto, este trabalho tem como objetivo o desenvolvimento de um modelo 
+rigoroso de coluna de destilação, genérico, dinâmico e de fácil aplicação nos mais variados
+tipos de estudos, desde simples simulações de operação até otimizações e previsões de comportamentos
+de parada e partida de plantas. Ou seja, um modelo projetado para situações onde uma representação fiel
+do comportamento dinâmico é necessária. Os modelos gerados neste estudo foram implementados na linguagem
+de modelagem do simulador \emso\ e fazem parte da biblioteca EML (EMSO Model Library). Esta biblioteca
+é distribuída no conceito de \emph{software} livre, disponibilizando todos os
+modelos via internet e sem custo.
+Para a validação dos modelos desenvolvidos foram utilizados dois exemplos: uma
+coluna de destilação reativa com dados provenientes da literatura e uma coluna
+deisobutanizadora industrial da PETROBRAS com 80 pratos que separa o isobutano de uma
+mistura de 13 componentes.
+Este último problema resulta em um sistema com mais de 6300 variáveis,
+provando que o simulador utilizado é muito eficiente para a resolução de
+problemas de grande escala. Os resultados da validação foram
+satisfatórios, assim como o desempenho do simulador \emso\ quanto à eficiência
+computacional e à robustez na solução do problema. }
+\palavraschave{1.~Destilação. 2.~Modelagem. 3.~Simulação Dinâmica. 4.~Colunas de pratos.}
+
+\abstract{At present, at least for engineering purposes, the most successful
+predictive models for activity coefficients are those based on functional
+groups, such as UNIFAC and its variants. While these models require large
+amounts of experimental data, the ones based on COSMO-RS require the calibration
+of a small set of universal parameters. However, the resolution required by
+engineering tasks, such as the optimization of separation systems, is higher
+than that obtained by COSMO-RS models. Thus, in this work a novel
+Functional-Segment Activity Coefficient (F-SAC) model is proposed. This new
+model is also based on the concept of functional groups, but the interaction
+energy between groups comes from the COSMO-RS theory.
+% The proposed model considers
+% that each pure substance consists of several neutral functional groups (with
+% global charge zero) and the model parameters are the apparent surface charges of
+% each group.
+In this study, we considered only mixtures where there is no formation of
+hydrogen bonds or when they could be assumed negligible. Then, only three
+parameters were required to describe each functional group. In principle, once
+the parameters for each functional group are properly calibrated, they should
+work to describe the interactions with any other group. This is the main
+advantage of the proposed model, the number of model parameters grows linearly
+with the number of functional groups, whereas in UNIFAC the number of
+interaction parameters exhibit quadratic growth with respect to the number of
+groups. For the experimental database of infinite dilution activity coefficients
+considered, the correlation of F-SAC have shown a mean absolute error of 0.07
+ln-unit. The UNIFAC~(Do) and COSMO-SAC models presented errors of 0.12 and 0.21,
+respectively. F-SAC was also evaluated for more than 1000 binary mixtures
+of solute in ionic liquid with data available in the literature.
+Again, the model have shown good correlation to the experimental data,
+with mean absolute error of 0.17
+ln-unit, similar to the performance with the organic mixtures. The predictive strength
+of the model was assessed by using vapor-liquid equilibrium data not
+considered in the model fitting process. Very good agreement with experimental
+data was possible over the entire composition range, as well as in the
+prediction of azeotropes.
+These results demonstrate the potential of the proposed method. }
+\keywords{1.Activity Coefficient. 2.COSMO. 3.UNIFAC. 4.IDAC. 5.VLE. 6.Ionic Liquid.}
+
+% Desse ponto modifique apenas a inclusão dos capítulos e apêndices
+\begin{document}
+
+% hifenizacao
+\include{hyphen}
+
+\maketitle
+
+% Inclusao dos Capítulos
+\include{Chap1}
+\include{Chap2}
+\include{Chap3}
+%\include{Chap4}
+%\include{Chap5}
+%\include{Chap6}
+\include{Chap7}
+
+% Comandos para as referencias bibliográficas
+\newdimen\bibindent
+\setlength\bibindent{1.5em} % identaçao das referencias
+{ % Um lineskip menor neste contexto de referencias
+\baselineskip 4.3mm
+% Edite o arquivo ppgeq.bib com as suas próprias referências
+\bibliography{ppgeq}
+}
+
+% Inclusao dos Appendices
+\appendix
+\include{Ap1}
+\include{Ap2}
+
+\end{document}
+

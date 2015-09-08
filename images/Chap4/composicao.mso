@@ -1,0 +1,11 @@
+	VARIABLES
+	trays(NTrays) as tray;
+	cond as condenserSteady;
+	reb as reboilerSteady;
+	tbottom as tank;
+	ttop as tank_cylindrical;
+	spbottom as splitter;
+	sptop as splitter;
+	pump1 as pump;
+
+

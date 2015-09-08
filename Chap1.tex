@@ -1,0 +1,165 @@
+%
+% 
+%
+\chapter{Introdução} \label{chap:introduction}
+
+\emph{Isto é uma sinopse de capítulo. A ABNT não traz nenhuma normatização a
+respeito desse tipo de resumo, que é mais comum em romances e livros técnicos.
+}
+
+
+A operação de separação de componentes de uma mistura por destilação tem uma longa história. Credita-se a sua
+descoberta aos chineses durante a dinastia de Chou (221 a 1122 d.C.). Desde então, a produção de bebidas destiladas,
+as chamadas ``bebidas dos deuses'', evoluíram juntamente com o progresso da civilização. Primeiro na Índia, depois na
+Arábia e posteriormente na Inglaterra, em torno de 500 d.C., com a produção de ``mead'', uma bebida alcóolica
+resultante da fermentação de mel e água. Mas surpreendentemente, apenas um milênio depois, por volta de 1500 d.C.,
+tem-se notícia do primeiro uísque destilado na Escócia \apud{Forbes:1948}{Lockett:1986}. Embora a produção de bebidas
+alcóolicas tenha uma grande importância no descobrimento e desenvolvimento da operação de destilação, nos dias de hoje,
+a sua utilização é muito mais difundida nas indústrias químicas e de petróleo, apesar do grande consumo de energia
+requirido \cite{Lockett:1986}.
+
+% \section{Revisão Bibliográfica} \label{sec:revbiblio}
+
+A simulação de processos de separação, em especial de colunas de destilação, é uma área muito importante na simulação
+de processos dinâmicos. A destilação é uma das operações que mais demanda
+energia dentre os processos químicos. Por exemplo, a destilação foi
+responsável por 11\% do gasto de energia em indústrias dos EUA no ano de 1991,
+conforme \apudonline{Humphrey:1992}{Koeijer:2004}.
+
+Este trabalho tem como objetivo o desenvolvimento de um modelo rigoroso, dinâmico e de fácil aplicação nos mais
+variados tipos de estudos, desde simples simulações de operação até otimizações e previsões de comportamentos
+de parada e partida de plantas. Ou seja, um modelo projetado para situações onde uma representação fiel do
+comportamento dinâmico é necessária.
+
+Para a realização de tal objetivo será utilizado o simulador genérico de processos EMSO \cite{Soares:2003} e seu
+ambiente de desenvolvimento de modelos. Os modelos gerados neste estudo fazem parte da biblioteca EML (EMSO Model
+Library). A EML é distribuída no conceito de \emph{software} livre, disponibilizando todos os modelos via internet
+e sem custo.
+
+A pesquisa acerca da modelagem de colunas de destilação não é mais uma novidade nos dias de hoje. A simulação de
+processos de separação por estágios de equilíbrio data de 1893, quando Sorel publicou equações simplificadas para
+destilação estacionária. O equacionamento incluía balanços de massa, total e parcial, e balanços de energia. Porém,
+as equações de Sorel não tiveram muita aplicação até o ano de 1921 quando serviram de base para o método gráfico
+de cálculo de separação para sistemas binários desenvolvido por Ponchon e Savarit. Em 1925, com algumas
+simplificações adicionais que eliminavam o balanço de energia, surgiu outro método gráfico, o método de
+McCabe e Thiele \cite{Kooijman:1995a}. Seu maior valor é didático e não prático.
+Este método utiliza gráficos construídos com relações de equilíbrio
+entre os componentes a serem destilados, para determinar o número de estágios necessários na separação e a
+razão de refluxo apropriada. As simplificações deste método são enormes, sendo projetado apenas para a separação
+de misturas binárias \cite{Brooks:1993}.
+Além disso, as vazões molares internas de líquido e vapor da coluna são consideradas constantes ao longo de cada seção, o
+que significa que a a entalpia de condensação do vapor que chega ao prato deve
+ser igual à entalpia de vaporização do líquido.
+
+Os primeiros trabalhos com metodologias propostas para a solução de sistemas de separação modelados prato a prato
+surgiram na década de 30. Só a partir da década de 50, com o advento do computador digital, foram realizados
+investimentos sólidos no desenvolvimento de novos algoritmos e simuladores. Apesar deste investimento, apenas
+modelos simplificados eram utilizados nas simulações devido à baixa capacidade
+de processamento.
+
+A partir da década de 70, os primeiros simuladores comerciais começaram a ser introduzidos na indústria e
+o desenvolvimento de modelos rigorosos não parou mais.
+
+Uma importante série de trabalhos encontrada na literatura foi desenvolvida por pesquisadores da Dinamarca,
+Austrália e Argentina e contemplou todos os tópicos do desenvolvimento de modelos: o equacionamento, a solução
+do sistema de equações resultante e a aplicação do modelo proposto.
+No primeiro trabalho, \citeonline{Gani:1986} apresentam um modelo dinâmico genérico e rigoroso que considera
+equilíbrio termodinâmico entre as fases.
+O comportamento hidrodinâmico também foi modelado tornando possível o acompanhamento das vazões internas de
+líquido e vapor da coluna e de eventos importantes como inundação e secagem dos pratos.
+Para comprovar a eficiência e generalidade do modelo, vários exemplos de unidades industriais foram simulados,
+validando o modelo com dados de planta.
+Este trabalho foi muito importante e desencadeou o desenvolvimento de muitos outros.
+
+Na sequência, \citeonline{Cameron:1986}, utilizando o modelo do trabalho anterior, abordaram aspectos numéricos
+para a resolução do sistema de equações obtido.
+Como naquela época não haviam códigos integradores de sistemas
+algébrico-diferenciais (\emph{Dif-ferential-Algebraic Equations} - DAE), a simulação dinâmica de colunas de destilação requeria uma separação do sistema.
+O conjunto de equações proveniente da modelagem era encarado como a união de um sub-sistema de equações
+diferenciais ordinárias (\emph{Ordinary Differential Equations} - ODE) acoplado a outro sub-sistema de equações
+algébricas. Assim, a solução do problema completo era obtida com a resolução sequencial dos dois blocos para cada
+passo de integração.
+No presente trabalho este problema é contornado, já
+que o ambiente no qual os modelos foram desenvolvidos, o simulador \emso\
+\cite{Soares:2003}, conta com integradores de sistemas DAE bem consolidados.
+
+Aplicando os resultados obtidos nos dois trabalhos anteriores, \citeonline{Ruiz:1988} propuseram o desenvolvimento
+de políticas de partida de colunas com base em simulações dinâmicas rigorosas.
+Como resultado deste estudo foi possível caracterizar a partida de uma planta pela definição de três estágios distintos.
+O primeiro, chamado \emph{estágio descontínuo}, é caracterizado pela descontinuidade das variáveis
+(principalmente associadas à hidráulica) e pelo pequeno período de tempo de duração.
+O segundo, chamado \emph{estágio semi-contínuo}, é identificado pelo comportamento transiente não-linear, embora não
+haja mais descontinuidades, e pela aproximação das variáveis hidráulicas aos seus valores estacionários.
+Já no terceiro, chamado \emph{estágio contínuo}, todas as variáveis alcançam comportamentos transientes lineares e
+no final deste estágio o estado estacionário é atingido.
+
+A aplicação dos modelos dinâmicos na predição do comportamento do sistema em partidas é muito importante, tanto para
+a prevenção de possíveis problemas de controle e operabilidade, como para evitar desperdícios de matéria-prima ou
+a geração de produtos fora de especificação.
+
+Em seguida, \citeonline{Gani:1989} propuseram modificações no modelo dinâmico para o uso de um novo método
+de resolução de simulações estacionárias. Este método tinha como objetivo alcançar maior robustez na solução de
+problemas estacionários, visto que é mais difícil a obtenção de resultados com modelos puramente algébricos do
+que com sistemas diferenciais. A troca entre o modo estacionário e o modo dinâmico dependia do cálculo dos resíduos
+das equações. Se, com as estimativas iniciais, o problema algébrico não conseguia ser resolvido, o problema passava
+para o modo dinâmico. No modo dinâmico, os estados eram estimados pela integração com as estimativas iniciais
+correspondendo às condições iniciais. Assim que alguns critérios de integração eram alcançados, o problema voltava
+para o modo estacionário que era então resolvido sem maiores dificuldades.
+
+Os trabalhos desenvolvidos pelo grupo de \citeauthoronline{Gani:1986}, embora baseados em modelos rigorosos, com
+várias correlações de hidrodinâmica tornando o modelo capaz de predizer com detalhes o comportamento hidráulico
+das fases líquida e vapor na coluna, consideram o equilíbrio termodinâmico
+entre as fases.
+Mas, um grau ainda maior de detalhamento também é estudado: a condição de não-equilíbrio termodinâmico entre as fases.
+Com a consideração de não-equilíbrio,
+a resistência à transferência de calor e massa tanto inter como intrafase são
+consideradas, gerando um sistema de equações mais complexo. No trabalho de
+\citeonline{Biardi:1989}, a difusão transiente dos componentes é modelada pelas equações de Maxwell-Stefan.
+A importância deste estudo está na comparação realizada entre modelos \emph{ideais} (com condição de equilíbrio
+termodinâmico) e \emph{reais} (onde o equilíbrio é considerado apenas na interface líquido-vapor). Esta comparação
+foi feita com dados experimentais de duas colunas em escala laboratorial e uma coluna industrial.
+Os modelos reais apresentaram resultados mais precisos, mas em contrapartida requerem uma série de parâmetros
+adicionais relacionados com a transferência de calor e massa entre as fases. Tais parâmetros são de difícil
+obtenção e têm um alto grau de incerteza associado. Além disso, este tipo de modelo exige um maior custo
+computacional em virtude da maior complexidade do sistema de equações gerado. Este tipo de equacionamento
+é muito utilizado quando se quer reproduzir processos de destilação reativa.
+
+Com o advento de computadores mais eficientes e integradores mais robustos, conseguiu-se resolver de forma mais
+rápida os modelos desenvolvidos, inclusive os mais rigorosos.
+Com a simulação ocorrendo em tempo real ou até algumas vezes mais rápido que isso, tornou-se possível a sua
+utilização no treinamento de operadores e engenheiros. Porém, segundo \citeonline{Solomon:2007}, é pouco difundido
+pois gasta-se mais tempo configurando a simulação que no treinamento propriamente dito.
+No trabalho de \citeonline{Olsen:1997}, uma unidade de purificação de metano contendo três colunas de destilação
+foi modelada, baseada no modelo desenvolvido por \citeonline{Gani:1986}.
+O sistema de equações resultante apresentava 266.000 variáveis e 97.000 parâmetros e era simulado em uma velocidade
+duas vezes mais rápida que a do processo.
+Este simulador era utilizado principalmente para o treinamento de partidas e paradas das unidades, onde a predição
+das características dinâmicas é de suma importância.
+
+
+Além de simuladores de treinamento, muitas outras aplicações necessitam de modelos que predigam com uma boa fidelidade
+o comportamento dinâmico de colunas de destilação. Entre as principais aplicações estão: simulações de partidas e
+paradas, otimizações estacionárias e dinâmicas, estimações de parâmetros e implementação de sistemas de controle.
+
+Os modelos disponíveis nos principais simuladores comerciais são geralmente do tipo ``caixa-preta'', impedindo que
+o usuário possa realizar adaptações, aprimoramentos ou até mesmo simplificações no modelo, se achar necessário. No
+caso em que não são fechados, os modelos disponíveis são construídos em linguagens de programação
+de difícil compreensão, limitando o seu manuseio.
+No simulador EMSO, todos os modelos são implementados em uma linguagem de
+modelagem simples e podem ser inspecionados e editados livremente pelo usuário.
+
+\nomenclature[Z]{EMSO}{Environment for Modeling, Simulation and Optimization}
+
+Esta dissertação está dividida em seis capítulos, estruturados da seguinte forma:
+
+O \autoref{chap:introduction} (este capítulo) trata da introdução e do objetivo deste trabalho.
+
+O \autoref{chap:revisaobibliografica} apresenta as principais variações existentes na modelagem de colunas de destilação
+encontradas na literatura, assim como suas vantagens e desvantagens frente às demais.
+
+No \autoref{chap:moddesenvolvidos}, são apresentados os modelos desenvolvidos com suas considerações,
+equacionamento e variações, bem como o ambiente utilizado para o desenvolvimento dos modelos,
+o simulador EMSO.
+
+Finalmente, no \autoref{chap:conclusoes}, as conclusões do trabalho são apresentadas bem como perspectivas de
+futuros trabalhos a serem desenvolvidos.
