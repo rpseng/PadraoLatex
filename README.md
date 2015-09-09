@@ -1,4 +1,4 @@
-# Padrao Latex do PPGEQ - UFRGS
+# Padrao LaTeX do PPGEQ - UFRGS
 Padrão de teses e dissertações do Programa de Pós-Graduação em Engenharia Química da UFRGS (www.ppgeq.ufrgs.br).
 
 Após clonar este repositório (preferencialmente um fork dele),
