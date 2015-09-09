@@ -6,6 +6,7 @@ utilize seu ambiente de edição TeX preferido.
 
 Uma alternativa é a utilização do http://www.eclipse.org em conjunto com o plugin
 TeXlipse - http://texlipse.sourceforge.net.
+Neste caso, após a instalação do plugin, basta importar o repositório como um projeto existente.
 
 Inicie editando o arquivo arquivo diss.tex. Este arquivo contém instruções para a produção
 da sua tese ou dissertação.
