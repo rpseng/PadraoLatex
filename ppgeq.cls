@@ -70,7 +70,7 @@
 \usepackage{bookmark}
 
 % pacote padrao ABNT para bibliografia
-\usepackage[alf, bibjustif, abnt-etal-cite=2, abnt-etal-list=0]{abntcite}
+\usepackage[alf, bibjustif, abnt-etal-cite=2,abnt-etal-list=0]{abntex2cite}
 \bibliographystyle{abnt-alf}
 % pacote para lista de simbolos
 \usepackage[portuguese]{nomencl}
