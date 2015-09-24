@@ -45,7 +45,7 @@
 %  \renewcommand{\listfigurename}{Lista de Ilustra\c{c}\~{o}es}
 }
 \renewcommand{\cftfigurename}{\figurename\space} 
-\renewcommand{\cfttablename}{\tablename\space} 
+\renewcommand{\cfttablename}{\tablename\space}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 
@@ -70,8 +70,13 @@
 \usepackage{bookmark}
 
 % pacote padrao ABNT para bibliografia
+% \usepackage[alf]{abntex2cite}
 \usepackage[alf, bibjustif, abnt-etal-cite=2,abnt-etal-list=0]{abntex2cite}
-\bibliographystyle{abnt-alf}
+
+% usar apenas se existir o arquivo abnt-alf, caso contrário o pacote abntex2cite
+% fará o resto
+% \bibliographystyle{abntex2cite-alf}
+
 % pacote para lista de simbolos
 \usepackage[portuguese]{nomencl}
 \def\nomname{Lista de Símbolos}
@@ -327,8 +332,8 @@ como requisito parcial para obtenção do Grau de \thecategorytitle.
 \cleardoublepage
 
 \begin{KeepFromToc}
-  \pdfbookmark[section]{\contentsname}{toc}
-  \tableofcontents
+\pdfbookmark[section]{\contentsname}{toc}
+\tableofcontents
 \end{KeepFromToc}
 \clearpage \listoffigures	
 \clearpage \listoftables
