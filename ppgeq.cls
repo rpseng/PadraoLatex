@@ -3,6 +3,8 @@
 %% Rafael de Pelegrini Soares (rafael@enq.ufrgs.br) Abril de 2014
 %%
 %% Autores do padrão PPGEQ para LaTeX (ppgeq.cls):
+%%  Melhorias em setembro de 2015:
+%%   - Guilherme Braganholo Flôres (gbflores@enq.ufrgs.br)
 %%  Melhorias em abril de 2014:
 %%   - Rafael de Pelegrini Soares (rafael@enq.ufrgs.br)
 %%  Melhorias em julho de 2012:
